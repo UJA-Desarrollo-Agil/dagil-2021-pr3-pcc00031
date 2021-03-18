@@ -1,6 +1,8 @@
-# Titulo
+# ROL ADVENTURE (provisional)
 
 ## Descripción
+
+En esta historia podrás elegir qué tipo de rol sigues en tu trayecto, navegarás en busca de desafíos, explorarás los distintos lugares del mundo y te enfrentarás a los enemigos más temidos de la faz de la tierra, todo ello mientras desarrollas a tu personaje. ¿A qué esperas para comenzar tu aventura?
 
 ## URL del tablero Trello
 https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
