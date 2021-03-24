@@ -24,3 +24,7 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
   1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
   2. El jugador podrá moverse de unas situaciones a otras: Es necesaria para la primera versión del juego.
   3. El jugador podrá recoger objetos a lo largo del juego: Ha sido seleccionada ya que en esta primera versión será necesario recoger objetos para poder pasarse la historia.
+  4. El jugador podrá usar objetos para resolver puzzles: A la hora de desbloquear algunas situaciones será necesario resolver algún puzzle o prueba en concreto.
+  7. El jugador debe poder saber cuántos puntos lleva en la partida: Implementaremos desde el primer momento un sistema para contabilizar el porcentaje de aventura completado.
+  10. Se añadirá música de fondo al juego: Es un punto bastante fácil y además conseguirá ambientar la experiencia y conseguir una mejor inmersión del jugador.
+  11. Se subirá el juego a un sitio web disponible on-line: De nuevo, es un requisito bastante fácil (en un principio) así que decidimos implementarlo desde el primer momento.
