@@ -20,6 +20,11 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 ![1](https://user-images.githubusercontent.com/78792818/112309267-6fe88780-8ca3-11eb-8ef7-e471d2a0fffe.png)
 ![2](https://user-images.githubusercontent.com/66868520/112309849-28aec680-8ca4-11eb-9365-136ead519346.jpeg)
 
+## (Práctica 4) Capturas de pantalla de las historias de usuario descompuestas en tareas
+
+![1](https://user-images.githubusercontent.com/78792818/113158377-084eb100-923c-11eb-84b0-a7fabb1358b7.png)
+
+
 ## (Práctica 4) Explicación de historias de usuario seleccionadas.
   1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
   2. El jugador podrá moverse de unas situaciones a otras: Es necesaria para la primera versión del juego.
