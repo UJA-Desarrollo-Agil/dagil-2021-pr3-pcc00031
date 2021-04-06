@@ -27,6 +27,11 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 ![3](https://user-images.githubusercontent.com/66868520/113158990-8c089d80-923c-11eb-8c32-a7ee08aee169.jpeg)
 ![4](https://user-images.githubusercontent.com/78792818/113160151-852e5a80-923d-11eb-800b-259799190a2e.png)
 
+## (Práctica 4) Consecuencia del Product Backlog Refinement(PBR)
+
+![1](https://user-images.githubusercontent.com/66868520/113691400-a921ee00-96cc-11eb-880e-cc782755301c.jpeg)
+
+
 ## (Práctica 4) Explicación de historias de usuario seleccionadas.
   1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
   2. El jugador podrá moverse de unas situaciones a otras: Es necesaria para la primera versión del juego.
