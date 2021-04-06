@@ -46,3 +46,5 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
   7. El jugador debe poder saber cuántos puntos lleva en la partida: Implementaremos desde el primer momento un sistema para contabilizar el porcentaje de aventura completado.
   10. Se añadirá música de fondo al juego: Es un punto bastante fácil y además conseguirá ambientar la experiencia y conseguir una mejor inmersión del jugador.
   11. Se subirá el juego a un sitio web disponible on-line: De nuevo, es un requisito bastante fácil (en un principio) así que decidimos implementarlo desde el primer momento.
+  16. Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc: Hemos decidido integrar esta historia ya que aporta un apartado visual muy interesante y carece de una dificultad excesiva.
+  18. En al menos una situación (de las existentes o incluyendo alguna/s nueva/s), se podrá establecer un diálogo con otro personaje del juego: Apartado muy interesante y remarcable debido a la complejidad y ambientación de nuestro juego.
