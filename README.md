@@ -30,6 +30,8 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 ## (Práctica 4) Consecuencia del Product Backlog Refinement(PBR)
 
 ![1](https://user-images.githubusercontent.com/66868520/113691400-a921ee00-96cc-11eb-880e-cc782755301c.jpeg)
+![2](https://user-images.githubusercontent.com/78795146/113691781-1b92ce00-96cd-11eb-924a-d743dc3a0284.jpeg)
+
 
 
 ## (Práctica 4) Explicación de historias de usuario seleccionadas.
