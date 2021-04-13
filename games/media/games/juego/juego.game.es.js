@@ -15,21 +15,21 @@ undum.game.id = "12b4d560-828e-11eb-9881-0800200c9a66"; // GEnerado por http://w
  * prevents Undum from trying to load the saved-game and crashing. */
 undum.game.version = "1.0";
 
-// En modo depuración, que no haya efectos de jquery
+// En modo depuraciï¿½n, que no haya efectos de jquery
 jQuery.fx.off=false
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
 				"<img style='width:500px; height:320px; display: block; margin: 0 auto'  class='img-situation' src='./media/img/Bienvenido.png'>\
-			<p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p>\
-			<p>Para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
+			<p>Bienvenido, estï¿½s a punto de comenzar tu aventura en este mundo.<\p>\
+			<p>Para llevar a cabo esta aventura, deberï¿½s indicarme quï¿½ tipo de rol quieres seguir en el juego:<\p>\
 			<a href='./baston' class='once'>Mago</a>, <a href='./espada' class='once'>Guerrero</a>",
 				{
 				actions: {
                 "baston": function(character, system, action) {
 															system.setQuality( "baston", true );
-															system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
+															system.setCharacterText("<p>Se te ha sido otorgado el baston mï¿½gico del poderoso Gandalf</p>");
 															system.doLink("selectorciudad");
 															},
 
@@ -42,37 +42,21 @@ undum.game.situations = {
 				}
 		),
 		selectorciudad: new undum.SimpleSituation (
-				"<p>Te propones a cambiar el mundo de esta pandemia que aún asola los paises del mundo y para ello necesitarás muchas cosas y te preguntas:</p>\
-				<p class='dialogo'>- ¿Que debería llevarme?</p>\
-        <p>Empiezas a pensar en un montón de cosas que encuentras en tu habitación y encuentras tu imitación perfecta \
-		del <a href='./manipulador' class='once'>manipulador de campos de energia cero</a> del famoso Gordon Freeman, \
-		<a href='./llaves' class='once'>las llaves</a>, <a href='comprarfiesta'>una botella de Whisky</a> y tu máquina del \
-		tiempo recién inventada <a href='./timemachine' class='once'>Time Machine</a> \
-		y te vas al <a href='patiotrasero'>patio trasero</a> a usar la máquina.</p>"
-		,
-				{
-				
-            actions: {
-                'baston': function(character, system, action) {
-															system.setQuality( "baston", true );
-															system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
-															},
-				'timemachine': function(character, system, action) {
-															system.setQuality( "timemachine", true );
-															system.setCharacterText("<p>Has cogido la máquina decidido a volver al pasado y cambiar el planeta.</p>");
-															},
-				'llaves': function( character, system, action) {
-																	system.setQuality( "llaves", true );
-																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrás entrar de nuevo.</p>" );
-																}
-					  },
-					  enter: function( character, system, from ){
-					$('body').css('background-image', 'url(https://catalogodemuebles.es/2333-thickbox_default/habitacion-juvenil-senior-en-novotex-aluminio-calabaza-y-fresno-con-tirador-unero-zaragoza-.jpg)')
-							}
-				}
+      "<p><h1>Tienes que tomar una decisiÃ³n.</h1></p>\
+    <p>Â¿A quÃ© ciudad quieres ir e intentar salvar a su civilizaciÃ³n de su oscuro futuro?:</p>\
+    <a href='yambuku'>Yambuku</a> o <a href='wuhan'>Wuhan</a>"
 		),
+
+    yambuku: new undum.SimpleSituation(
+      "<p>Por implementar</p>"
+    ),
+    wuham: new undum.SimpleSituation(
+      "<p>Por implementar</p>"
+    ),
+
+
 		comprarfiesta: new undum.SimpleSituation(
-			"<p>Pensativo empiezas a pensar que ese día tenías una fiesta de carnaval a escondidas de la policía</p>\
+			"<p>Pensativo empiezas a pensar que ese dï¿½a tenï¿½as una fiesta de carnaval a escondidas de la policï¿½a</p>\
 			<p> Por lo que te decides a comprar la bebida, buscando tu <a href='./mascarilla' class='once'>mascarilla</a>, \
 			 y por supuesto <a href='./dinero' class='once'>dinero</a>. </p>\
 			<p>Recapacitando puedes <a href='habitacion'>pensar mejor y no ir a la fiesta</a> o <a href='mercadona'>ir a comprar la bebida</a>.</p>",
@@ -80,46 +64,46 @@ undum.game.situations = {
             actions: {
                 'mascarilla': function( character, system, action) {
 																	system.setCharacterText( "<p>Necesaria para salir de casa. \
-																											Si no quieres que te multen claro está.(Virus a parte)</p>" );
+																											Si no quieres que te multen claro estï¿½.(Virus a parte)</p>" );
 																},
 				'llaves': function( character, system, action) {
 																	system.setQuality( "llaves", true );
-																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrás entrar de nuevo.</p>" );
+																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrï¿½s entrar de nuevo.</p>" );
 																},
 				'dinero': function( character, system, action) {
-																	system.setCharacterText( "<p>Con esto podrás comprar todo lo que quieras. \
-																														Sí eres rico asi que no escatimes.</p>" );
+																	system.setCharacterText( "<p>Con esto podrï¿½s comprar todo lo que quieras. \
+																														Sï¿½ eres rico asi que no escatimes.</p>" );
 																},
 					  }
 				}
 		),
-		
+
 		mercadona: new undum.SimpleSituation(
 			"<h1>Mercadona</h1>\
-			<p>Aquí te puedes comprar todo lo que necesites para la fiesta, una botella de <a href='./whisky' class='once'>Whisky</a>, \
+			<p>Aquï¿½ te puedes comprar todo lo que necesites para la fiesta, una botella de <a href='./whisky' class='once'>Whisky</a>, \
 			<a href='./coca-cola' class='once'>Coca-Cola</a>, <a href='./fanta' class='once'>Fanta</a>, <a href='./vasos' class='once'>Vasos</a> \
 			y <a href='./hielo' class='once'>Hielo</a>. </p>\
-			<p> <a href='casanollavenop'>Y vuelves a casa después de pagar todo lo que has cogido</a>. </p>",
+			<p> <a href='casanollavenop'>Y vuelves a casa despuï¿½s de pagar todo lo que has cogido</a>. </p>",
 				{
             actions: {
                 'whisky': function( character, system, action) {
 																	system.setCharacterText( "<p>Necesaria para salir de casa. \
-																											Si no quieres que te multen claro está.(Virus a parte)</p>" );
+																											Si no quieres que te multen claro estï¿½.(Virus a parte)</p>" );
 																},
 				'coca-cola': function( character, system, action) {
-																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrás entrar de nuevo.</p>" );
+																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrï¿½s entrar de nuevo.</p>" );
 																},
 				'fanta': function( character, system, action) {
-																	system.setCharacterText( "<p>Con esto podrás comprar todo lo que quieras. \
-																														Sí eres rico asi que no escatimes.</p>" );
+																	system.setCharacterText( "<p>Con esto podrï¿½s comprar todo lo que quieras. \
+																														Sï¿½ eres rico asi que no escatimes.</p>" );
 																},
 				'vasos': function( character, system, action) {
-																	system.setCharacterText( "<p>Con esto podrás comprar todo lo que quieras. \
-																														Sí eres rico asi que no escatimes.</p>" );
+																	system.setCharacterText( "<p>Con esto podrï¿½s comprar todo lo que quieras. \
+																														Sï¿½ eres rico asi que no escatimes.</p>" );
 																},
 				'hielo': function( character, system, action) {
-																	system.setCharacterText( "<p>Con esto podrás comprar todo lo que quieras. \
-																														Sí eres rico asi que no escatimes.</p>" );
+																	system.setCharacterText( "<p>Con esto podrï¿½s comprar todo lo que quieras. \
+																														Sï¿½ eres rico asi que no escatimes.</p>" );
 																},
 					  },
 					  enter: function( character, system, from ){
@@ -139,7 +123,7 @@ undum.game.situations = {
             $('body').css('background-image', 'url(https://espaciohogar.com/wp-content/uploads/2020/10/facahdas-modernas-2021.jpg')
 						system.write( "<p>y descubres que al salir de tu casa olvidaste las llaves \
 						por lo que recuerdas la llave que hay escondida en el <a href='patiotraserollavenop'>patio trasero</a>. </p>"
-						
+
 				);
 					}
 				}
@@ -148,38 +132,38 @@ undum.game.situations = {
 
 		patiotraserollavenop: new undum.SimpleSituation(
 			"<h1>Patio trasero</h1> \
-			<p> Buscando en el árbol en el agujero trasero <a href='./llaves' class='once'>coges la llave</a> y vuelves a <a href='casanollavenop'>la puerta</a> para entrar.</p>",
+			<p> Buscando en el ï¿½rbol en el agujero trasero <a href='./llaves' class='once'>coges la llave</a> y vuelves a <a href='casanollavenop'>la puerta</a> para entrar.</p>",
 				{
 				enter: function( character, system, from ){
 					$('body').css('background-image', 'url(https://decortips.com/es/_next/image?url=https%3A%2F%2Fdecortips.com%2Fes%2Fwp-content%2Fuploads%2F2019%2F04%2Ftener-jardin-bonito.jpg&w=1920&q=75)')
 							},
             actions: {
-				
+
 				'llaves': function( character, system, action) {
 																	system.setQuality( "llaves", true );
-																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrás entrar de nuevo.</p>" );
+																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrï¿½s entrar de nuevo.</p>" );
 																}
-				
+
 					  }
 				}
 		),
 
 		patiotraserollavesip: new undum.SimpleSituation(
 			"<h1>Patio trasero</h1> \
-			<p> Buscando en el árbol en el agujero trasero <a href='./llaves' class='once'>coges la llave</a> y vuelves a <a href='casanollavesip'>la puerta</a> para entrar.</p>",
+			<p> Buscando en el ï¿½rbol en el agujero trasero <a href='./llaves' class='once'>coges la llave</a> y vuelves a <a href='casanollavesip'>la puerta</a> para entrar.</p>",
 				{
 				enter: function( character, system, from ){
 					$('body').css('background-image', 'url(https://decortips.com/es/_next/image?url=https%3A%2F%2Fdecortips.com%2Fes%2Fwp-content%2Fuploads%2F2019%2F04%2Ftener-jardin-bonito.jpg&w=1920&q=75)')
 				},
             actions: {
-				
+
 				'llaves': function( character, system, action) {
 																	system.setQuality( "llaves", true );
-																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrás entrar de nuevo.</p>" );
+																	system.setCharacterText( "<p>Cuidado porque sin ellas no podrï¿½s entrar de nuevo.</p>" );
 																}
 					  }
 				}
-				
+
 		),
 		casaconllavenop: new undum.SimpleSituation(
 			"<h1>Casa</h1>\
@@ -210,7 +194,7 @@ undum.game.situations = {
 
 		patiotrasero: new undum.SimpleSituation(
 			"<h1>Patio trasero</h1>\
-			<p>Una vez en el patio te dispones a viajar al pasado al momento justo en que el maldito chino se comió el pangolín. </p>",
+			<p>Una vez en el patio te dispones a viajar al pasado al momento justo en que el maldito chino se comiï¿½ el pangolï¿½n. </p>",
 			{
 				enter: function( character, system, from ) {
 					$('body').css('background-image', 'url(https://decortips.com/es/_next/image?url=https%3A%2F%2Fdecortips.com%2Fes%2Fwp-content%2Fuploads%2F2019%2F04%2Ftener-jardin-bonito.jpg&w=1920&q=75)')
@@ -220,7 +204,7 @@ undum.game.situations = {
 					$('body').css('background-image', 'url(https://decortips.com/es/_next/image?url=https%3A%2F%2Fdecortips.com%2Fes%2Fwp-content%2Fuploads%2F2019%2F04%2Ftener-jardin-bonito.jpg&w=1920&q=75)')
 						system.write( "<p>y descubres que no has cogido la maquina del tiempo para viajar al pasado \
 										por lo que decides <a href='habitacion'>volver a por ella</a>. </p>"
-						
+
 				);
 					}
 				}
@@ -229,8 +213,8 @@ undum.game.situations = {
 
 		pasado: new undum.SimpleSituation(
 			"<h1>Marzo de 2020</h1>\
-			<p> Te encuentras en china en marzo en el año 2020 momentos antes de la consumición del pangolín.</p> \
-			<p> De repente, te quedas pensativo y sorprendido al ver a toda la multitud sin mascarilla y recuerdas cuando todo antes estaba así \
+			<p> Te encuentras en china en marzo en el aï¿½o 2020 momentos antes de la consumiciï¿½n del pangolï¿½n.</p> \
+			<p> De repente, te quedas pensativo y sorprendido al ver a toda la multitud sin mascarilla y recuerdas cuando todo antes estaba asï¿½ \
 			y te decides a <a href='restaurante'>entrar</a> al restaurante chino y evitar que ocurra todo. </p>",
 				{
 				enter: function( character, system, from ){
@@ -240,9 +224,9 @@ undum.game.situations = {
 		),
 
 		restaurante: new undum.SimpleSituation(
-			"<p> Estás en el restaurante y llamas al camarero para que te ponga a ti el pangolín que le ibas a poner al otro cliente ofreciendole 7000 yuanes. </p>\
+			"<p> Estï¿½s en el restaurante y llamas al camarero para que te ponga a ti el pangolï¿½n que le ibas a poner al otro cliente ofreciendole 7000 yuanes. </p>\
 			<p> El camarero se vuelve loco y obviamente te ofrece a ti el <a href='./pangolin' class='once'>pangolin</a>, por lo que tu decides guardarlo.\
-			Después de todo no ha sido tan difícil... y te decides a <a href='casanollavesip'>volver a tu casa</a></p>",
+			Despuï¿½s de todo no ha sido tan difï¿½cil... y te decides a <a href='casanollavesip'>volver a tu casa</a></p>",
 				{
             actions: {
 				'pangolin': function( character, system, action) {
@@ -251,11 +235,11 @@ undum.game.situations = {
 																										Cuidado no te lo comas o lo liaras todo de nuevo.</p>" );
 																}
 					  },
-					  
+
 				enter: function( character, system, from ){
 					$('body').css('background-image', 'url(http://www.gzddd.com/uploads/allimg/191009/1-1910091543123E.jpg)')
 					}
-				
+
 				}
 		),
 
@@ -276,8 +260,8 @@ undum.game.situations = {
 				}
 			}
 		)
-		
-		
+
+
 };
 
 
@@ -297,7 +281,7 @@ undum.game.qualities = {
 	baston: new undum.OnOffQuality(
 		"Baston", {priority:"0002", group:'inventario', onDisplay:"&#10003;"}
 	),
-	
+
 	espada: new undum.OnOffQuality(
 		"Espada", {priority:"0003", group:'inventario', onDisplay:"&#10003;"}
 	),
@@ -305,7 +289,7 @@ undum.game.qualities = {
 	pangolin: new undum.OnOffQuality(
 		"Pangolin", {priority:"0004", group:'inventario', onDisplay:"&#10003;"}
 	)
-	  
+
 };
 
 // ---------------------------------------------------------------------------
@@ -326,5 +310,5 @@ undum.game.init = function(character, system) {
 	system.setQuality( "baston" , false )
 	system.setQuality( "espada", false )
 	system.setQuality( "pangolin", false )
-    system.setCharacterText("<p>¡Comienzas tu fascinante aventura!</p>");
+    system.setCharacterText("<p>ï¿½Comienzas tu fascinante aventura!</p>");
 };
