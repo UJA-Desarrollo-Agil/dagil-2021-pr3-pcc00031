@@ -22,24 +22,26 @@ jQuery.fx.off=false
 undum.game.situations = {
     start: new undum.SimpleSituation(
 				"<img style='width:500px; height:320px; display: block; margin: 0 auto'  class='img-situation' src='./media/img/Bienvenido.png'>\
-			<p>Bienvenido¡, estás a punto de comenzar tu aventura en este mundo.<\p>\
-			<p>PAra llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
+			<p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p>\
+			<p>Para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
 			<a href='./baston' class='once'>Mago</a>, <a href='./espada' class='once'>Guerrero</a>",
 				{
 				actions: {
-                'baston': function(character, system, action) {
+                "baston": function(character, system, action) {
 															system.setQuality( "baston", true );
 															system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
+															system.doLink("selectorciudad");
 															},
 
-				'espada': function(character, system, action) {
+				"espada": function(character, system, action) {
 															system.setQuality( "espada", true );
 															system.setCharacterText("<p>Se te ha sido otorgada la espada Excalibur del poderoso King Arthur</p>");
+															system.doLink("selectorciudad");
 															}
 					}
 				}
 		),
-		PrimeroMago: new undum.SimpleSituation (
+		selectorciudad: new undum.SimpleSituation (
 				"<p>Te propones a cambiar el mundo de esta pandemia que aún asola los paises del mundo y para ello necesitarás muchas cosas y te preguntas:</p>\
 				<p class='dialogo'>- ¿Que debería llevarme?</p>\
         <p>Empiezas a pensar en un montón de cosas que encuentras en tu habitación y encuentras tu imitación perfecta \
