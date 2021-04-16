@@ -92,7 +92,7 @@ undum.game.situations = {
 	),
 
 	cuevabossuno: new undum.SimpleSituation(
-	"<p>Por implementar</p>"
+	"<p>Por implementar...</p>"
 	),
 
 
