@@ -21,9 +21,9 @@ jQuery.fx.off=false
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
-		"<p><h1>Comienza tu aventura</h1>\
+		"<h1>Comienza tu aventura</h1>\
 		<img style = 'width:500px; height:320px; display: block; margin: 0 auto'  class= 'img-situation' src = './media/img/Bienvenido.png' > <br> \
-			Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p> </br>\
+			<p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p> </br>\
 			<p>Para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
 			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>",
 				{
@@ -54,25 +54,47 @@ undum.game.situations = {
 		<p>Acabas de llegar a África. Este clima tan caluroso te recuerda a que podrías estar de vacaciones en Marbella en vez de intentar salvar el mundo, \
 		pero bueno, tal y como dijo el tío Ben, un gran poder conlleva una gran responsabilidad. \
 		Después de horas y horas de caminar por el desierto, y a punto de desfallecer, encuentras Yambuku.</p>  </br>\
-		<p>Menos mal que te apuntaste a esa clase que anunciaban en youtube sobre aprender idiomas, \
-		porque gracias a ello sabes más de 100 idiomas y puedes tener una conversación con los habitantes de esa aldea. </p> </br>\
-		<p>Un lugareño con pintas extravagantes te saluda: </p>"
+		<p>Mientras paseabas por la aldea, te cruzas con un señor con unas prendas algo distintas a los demás, \
+		por lo que llegas a la conclusión de que ese señor puede ser alguien importante de la aldea.Por ello decides llamar su atención. </p></br >\
+		<p>Como era de esperar, no habla el mismo idioma que tú, pero gracias a esos cursos que se anunciaban en youtube sobre aprender idiomas conseguiste \
+		aprender todas las lenguas existentes en el mundo.</p> </br>\
+		<p> Un lugareño con pintas extravagantes te saluda: </p> \
+		<p class='dialogo'><strong> Toro Sentado: </strong> Jambo,¿en qué puedo ayudarte?\
+		<ul><li> <a href='./diag1' class='once'>¿Me podría decir donde habitan los murciélagos de la fruta? </a></li>\
+		<li> <a href='./diag2' class='once'>¿Qué prendas más bonitas,¿dónde las has comprado?</a> </li> \
+		<li> <a href='./diag3' class='once'>¿Qué opinas sobre las metodologías ágiles? </a></li></ul></p>",
+		{
+			actions: {
+				"diag1": function (character, system, action) {
+					
+					system.setCharacterText("<p>Los murciélagos se sitúan en zonas cálidas y regiones con alta afluencia de árboles frutales. Al sur de esta aldea podrás encontrar esta zona. </p>");
+					system.doLink("cuevabossuno");
+				},
 
-		// dialogo... 
+				"diag2": function (character, system, action) {
+			
+					system.setCharacterText("<p>Una pregunta algo tonta, ya que estas en una aldea perdida de la mano de dios y el tema de compra venta no está muy avanzada. </p>");
+
+				},
+				"diag3": function (character, system, action) {
+		
+					system.setCharacterText("<p>Pienso que son totalmente necesarias,sobre todo me ayudan en el cumplimiento de los objetivos del desarrollo de la aldea y en la simplificación de las mismas. Sin ellas, la aldea no hubiera prosperado tanto en tan poco tiempo.</p>");
+
+				},
+			}
+		}
+
 	),
 
 
     wuham: new undum.SimpleSituation(
-      "<p>Por implementar</p>"
-    ),
 
-	dialogouno: new undum.SimpleSituation(
-		"<p>Por implementar</p>"
 	),
 
-	dialogodos: new undum.SimpleSituation(
-		"<p>Por implementar</p>"
+	cuevabossuno: new undum.SimpleSituation(
+	"<p>Por implementar</p>"
 	),
+
 
 	primerboss: new undum.SimpleSituation(
 		"<p>Por implementar</p>"
