@@ -92,7 +92,73 @@ undum.game.situations = {
 	),
 
 	cuevabossuno: new undum.SimpleSituation(
-	"<p>Por implementar...</p>"
+		"<h1>Cueva Frutal</h1>\
+	<p>Después de una larga caminata, consigues divisar el tan ansiado bosque, \
+	por lo que te diriges de inmediato allí. Entre tanto árbol, encuentras una \
+	cueva muy sospechosa, por lo que decides entrar.</p></br>\
+	<p>Al entrar a la cueva encuentras 3 caminos.<ul>\
+	<li> <a href='./caminonor' class='once'>Camino normal</a></li>\
+	<li> <a href='./caminoes' class='once'>Camino estrecho</a> </li> \
+	<li> <a href='./caminoos' class='once'>Camino oscuro</a></li></ul></p>",
+	{
+		actions: {
+			"caminonor": function (character, system, action) {
+				if( character.qualities.llave ) {
+					system.doLink( "caminonorllave" );
+				} else {
+					system.doLink( "caminonornollave" );
+				}
+			},
+
+			"caminoes": function (character, system, action) {
+		
+				system.doLink( "caminoes" );
+
+			},
+			"caminoos": function (character, system, action) {
+				if(system.qualities.antorcha){
+					system.doLink("caminoosantorcha");
+				}else{
+					system.doLink("caminoosnoantorcha");
+				}
+
+			}
+		}
+	}
+	),
+	caminonornollave: new undum.SimpleSituation(
+		"	<h1>Cueva Frutal</h1>\
+		<p>Tras andar un buen rato, divisas una puerta con un gran candado.</p>\
+		<p>Vaya, parece ser que no tienes la llave, pero tu intuicion te dice que la llave no estará muy lejos.</p>\
+		<p>Por ello, decides <a href='cuevabossuno'>volver atrás</a> y buscar en la cueva </p>"
+	),
+	caminonorllave: new undum.SimpleSituation(
+		//Em esta situacion abres la puerta y dejas un <a href que implementare yo mas tarde>
+		"POR IMPLEMENTAR"
+	),
+	caminoes: new undum.SimpleSituation(
+		"	<h1>Cueva Frutal</h1>\
+		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.\
+		!QUE DRAMA!, tanto esfuerzo para nada. Solo encuentras una antorcha la cual decides llevarte por si la necesitaras.</p>\
+		<p>Solo puedes mirar a la pared, por lo que decides <a href='cuevabossuno'>volver atrás</a></p>",
+		{
+			enter: function( character, system, from ) {
+				system.setQuality( "antorcha", true );
+				
+			}
+		}
+		
+
+	),
+	caminoosantorcha: new undum.SimpleSituation(
+		//IMPLEMENTAR DIEGO AQUI PILLAS LA LLAVE QUE LUEGO USAS
+		"<p>Vaya</p>"
+
+	),
+	caminoosnoantorcha: new undum.SimpleSituation(
+		//IMPLEMENTAR DIEGO INVENTA ALGO ROLLO NO VEO UNA MIERDA Y TAL
+		"<p>No tienes una antorcha</p>"
+
 	),
 
 
@@ -121,6 +187,9 @@ undum.game.qualities = {
 
 	baston: new undum.OnOffQuality(
 		"Baston", {priority:"0002", group:'inventario', onDisplay:"&#10003;"}
+	),
+	antorcha: new undum.OnOffQuality(
+		"Antorcha", {priority:"0005", group:'inventario', onDisplay:"&#10003;"}
 	),
 
 	espada: new undum.OnOffQuality(
@@ -151,5 +220,6 @@ undum.game.init = function(character, system) {
 	system.setQuality( "baston" , false )
 	system.setQuality( "espada", false )
 	system.setQuality( "pangolin", false )
+	system.setQuality( "antorcha" , false )
     system.setCharacterText("<p>�Comienzas tu fascinante aventura!</p>");
 };
