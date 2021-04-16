@@ -116,11 +116,15 @@ undum.game.situations = {
 
 			},
 			"caminoos": function (character, system, action) {
-				if(system.qualities.antorcha){
+				if(character.qualities.antorcha){
 					system.doLink("caminoosantorcha");
 				}else{
-					system.doLink("caminoosnoantorcha");
+					system.doLink("caminoosnoantorcha")
 				}
+					
+				
+					
+				
 
 			}
 		}
@@ -138,21 +142,20 @@ undum.game.situations = {
 	),
 	caminoes: new undum.SimpleSituation(
 		"	<h1>Cueva Frutal</h1>\
-		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.\
-		!QUE DRAMA!, tanto esfuerzo para nada. Solo encuentras una antorcha la cual decides llevarte por si la necesitaras.</p>\
+		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.</p>\
+		<p>!QUE DRAMA!, tanto esfuerzo para nada. Solo encuentras una <a class='once' href='./antorcha'>antorcha</a> </p>\
 		<p>Solo puedes mirar a la pared, por lo que decides <a href='cuevabossuno'>volver atrás</a></p>",
 		{
-			enter: function( character, system, from ) {
-				system.setQuality( "antorcha", true );
-				
+			actions:{
+			"antorcha":function (character, system, action) {
+				system.setQuality("antorcha", true );
 			}
 		}
-		
-
+		}
 	),
 	caminoosantorcha: new undum.SimpleSituation(
-		//IMPLEMENTAR DIEGO AQUI PILLAS LA LLAVE QUE LUEGO USAS
-		"<p>Vaya</p>"
+		//IMPLEMENTAR DIEGO AQUI PILLAS LA LLAVE al alumbrar con la antorcha recogida
+		"<p>Tienes antorcha</p>"
 
 	),
 	caminoosnoantorcha: new undum.SimpleSituation(
