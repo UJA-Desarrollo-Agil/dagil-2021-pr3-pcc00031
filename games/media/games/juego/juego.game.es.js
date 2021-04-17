@@ -208,7 +208,7 @@ undum.game.situations = {
 		{
 			actions: {
 				enter: function (character, system, action) {
-				//	system.setQuality("pangolin", true);   --> PEDRO: Quita el comentario de esto y ya tienes tu tarea 7.2 hecha
+					system.setQuality("pangolin", true);  
 				}
 			}
 		}
