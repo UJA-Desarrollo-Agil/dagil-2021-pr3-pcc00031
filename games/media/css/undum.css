@@ -19,7 +19,8 @@ body {
 
 /* The title block */
 #title, #title .label, #content, .tools {
-    border-radius: 2px;
+    border-radius: 5px;
+    color: white;
 }
 #title {
     max-width: 28em;
@@ -28,6 +29,7 @@ body {
     padding: 1.7em;
     border: 1.1em solid rgba(0,0,0,0.25);
     cursor: pointer; /* Until we click to start. */
+    color:white;
 }
 #title .label {
     overflow: hidden;
@@ -38,7 +40,7 @@ body {
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.4);
             box-shadow: 0 0 4px rgba(0,0,0,0.4);
     position: relative;
-opacity: 0.5;
+opacity: 1;
 background-size: 100%;
 }
 #title h1 {
@@ -48,6 +50,7 @@ background-size: 100%;
     font-weight: normal;
     padding-bottom: 1.1em;
     border-bottom: 1px solid #321;
+    color: white;
 }
 #title h2 {
     font-size: 1.2em;
@@ -62,7 +65,7 @@ background-size: 100%;
     margin: 1.1em 0 0 0;
 }
 #title h1, #title h2, #title h3 {
-    color: rgba(33,17,0,0.9);
+    color: white;
     text-shadow: rgba(255,255,255,0.5) 2px 2px 2px,
     rgba(0,0,0,0.1) -1px -1px 2px;
 }
@@ -106,6 +109,7 @@ background-size: 100%;
     overflow: auto;
     background-size: 100%;
     opacity: 0.6;
+    border-radius: 6px;
 }
 span.drop + p {
     text-indent: -0.4em;
@@ -177,7 +181,7 @@ h1:first-child {
     margin-top: 0;
 }
 a {
-    color: #900;
+    color: white;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
@@ -186,7 +190,7 @@ a.raw {
     background: transparent url("../img/external_link.png") no-repeat right 4px;
 }
 a:hover {
-    border-bottom: 1px dotted #900;
+    border-bottom: 1px dotted white;
 }
 
 img.float_right {
@@ -251,14 +255,14 @@ img.float_left {
     border-radius: 4px;
 }
 .buttons button:hover {
-    background: #987;
+    
 }
 .buttons button + button {
     margin-left: 0.3em;
 }
 .buttons button[disabled], .buttons button[disabled]:hover {
-    background: #ba9;
-    color: #dcb;
+    
+    color: black;
     cursor: default;
 }
 
@@ -307,7 +311,7 @@ img.float_left {
     float: right;
 }
 .highlight {
-    background: rgba(255, 255, 0, 0.75);
+    background: rgba(0, 0, 0, 0.55);
     position: absolute;
     left: -4px;
     right: -4px;
