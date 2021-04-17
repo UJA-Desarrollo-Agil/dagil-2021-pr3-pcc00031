@@ -181,14 +181,14 @@ undum.game.situations = {
 	seguramente no puedas acabar con ella sin antes descubrir los misterios de la cueva. </p></br> \
 	<p>Procedes a enfrentarte con los pangolines que te atacan: </p> </br>\
 	<p><ul><li><a href='pangolin'> Matar pangolín </a></li> \
-	<li><a href=''>Enfrentar al Pangolín Gigante</a></li></ul></p>"
+	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>"
 	),
 
 	pangolin: new undum.SimpleSituation(
 		"<h1>Matar pangolín</h1> \
 	<p>Te encuentras con los súbditos del Pangolín Gigante, decides:</p></br>\
 	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
-	<li><a href=''>Enfrentar al Pangolín Gigante</a></li></ul></p>",
+	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
 		{
 
 			actions: {
