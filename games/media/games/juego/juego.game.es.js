@@ -16,38 +16,38 @@ undum.game.id = "12b4d560-828e-11eb-9881-0800200c9a66"; // GEnerado por http://w
 undum.game.version = "1.0";
 
 // En modo depuraci�n, que no haya efectos de jquery
-jQuery.fx.off=false
+jQuery.fx.off = false
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
-    start: new undum.SimpleSituation(
+	start: new undum.SimpleSituation(
 		"<h1>Comienza tu aventura</h1>\
 		<img style = 'width:500px; height:320px; display: block; margin: 0 auto'  class= 'img-situation' src = './media/img/Bienvenido.png' > <br> \
 			<p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p> </br>\
 			<p>Para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
 			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>",
-				{
-				actions: {
-                "baston": function(character, system, action) {
-															system.setQuality( "baston", true );
-															system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
-															system.doLink("selectorciudad");
-															},
+		{
+			actions: {
+				"baston": function (character, system, action) {
+					system.setQuality("baston", true);
+					system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
+					system.doLink("selectorciudad");
+				},
 
-				"espada": function(character, system, action) {
-															system.setQuality( "espada", true );
-															system.setCharacterText("<p>Se te ha sido otorgada la espada Excalibur del poderoso King Arthur</p>");
-															system.doLink("selectorciudad");
-															}
-					}
+				"espada": function (character, system, action) {
+					system.setQuality("espada", true);
+					system.setCharacterText("<p>Se te ha sido otorgada la espada Excalibur del poderoso King Arthur</p>");
+					system.doLink("selectorciudad");
 				}
+			}
+		}
 	),
 
-	selectorciudad: new undum.SimpleSituation (
+	selectorciudad: new undum.SimpleSituation(
 		"<h1>Tienes que tomar una decisión.</h1>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
 		<h1><a href='africa'>Yambuku</a> o <a href='wuham'>Wuhan</a></h1></p>"
-		),
+	),
 
 	africa: new undum.SimpleSituation(
 		"<h1>Yambuku</h1> \
@@ -66,18 +66,18 @@ undum.game.situations = {
 		{
 			actions: {
 				"diag1": function (character, system, action) {
-					
+
 					system.setCharacterText("<p>Los murciélagos se sitúan en zonas cálidas y regiones con alta afluencia de árboles frutales. Al sur de esta aldea podrás encontrar esta zona. </p>");
 					system.doLink("cuevabossuno");
 				},
 
 				"diag2": function (character, system, action) {
-			
+
 					system.setCharacterText("<p>Una pregunta algo tonta, ya que estas en una aldea perdida de la mano de dios y el tema de compra venta no está muy avanzada. </p>");
 
 				},
 				"diag3": function (character, system, action) {
-		
+
 					system.setCharacterText("<p>Pienso que son totalmente necesarias,sobre todo me ayudan en el cumplimiento de los objetivos del desarrollo de la aldea y en la simplificación de las mismas. Sin ellas, la aldea no hubiera prosperado tanto en tan poco tiempo.</p>");
 
 				},
@@ -87,7 +87,7 @@ undum.game.situations = {
 	),
 
 
-    wuham: new undum.SimpleSituation(
+	wuham: new undum.SimpleSituation(
 
 	),
 
@@ -100,35 +100,35 @@ undum.game.situations = {
 	<li> <a href='./caminonor' class='once'>Camino normal</a></li>\
 	<li> <a href='./caminoes' class='once'>Camino estrecho</a> </li> \
 	<li> <a href='./caminoos' class='once'>Camino oscuro</a></li></ul></p>",
-	{
-		actions: {
-			"caminonor": function (character, system, action) {
-				if( character.qualities.llave ) {
-					system.doLink( "caminonorllave" );
-				} else {
-					system.doLink( "caminonornollave" );
+		{
+			actions: {
+				"caminonor": function (character, system, action) {
+					if (character.qualities.llave) {
+						system.doLink("caminonorllave");
+					} else {
+						system.doLink("caminonornollave");
+					}
+				},
+
+				"caminoes": function (character, system, action) {
+
+					system.doLink("caminoes");
+
+				},
+				"caminoos": function (character, system, action) {
+					if (character.qualities.antorcha) {
+						system.doLink("caminoosantorcha");
+					} else {
+						system.doLink("caminoosnoantorcha")
+					}
+
+
+
+
+
 				}
-			},
-
-			"caminoes": function (character, system, action) {
-		
-				system.doLink( "caminoes" );
-
-			},
-			"caminoos": function (character, system, action) {
-				if(character.qualities.antorcha){
-					system.doLink("caminoosantorcha");
-				}else{
-					system.doLink("caminoosnoantorcha")
-				}
-					
-				
-					
-				
-
 			}
 		}
-	}
 	),
 	caminonornollave: new undum.SimpleSituation(
 		"	<h1>Cueva Frutal</h1>\
@@ -140,17 +140,19 @@ undum.game.situations = {
 		//Em esta situacion abres la puerta y dejas un <a href que implementare yo mas tarde>
 		"POR IMPLEMENTAR"
 	),
+
+
 	caminoes: new undum.SimpleSituation(
 		"	<h1>Cueva Frutal</h1>\
 		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.</p>\
 		<p>!QUE DRAMA!, tanto esfuerzo para nada. Solo encuentras una <a class='once' href='./antorcha'>antorcha</a> </p>\
 		<p>Solo puedes mirar a la pared, por lo que decides <a href='cuevabossuno'>volver atrás</a></p>",
 		{
-			actions:{
-			"antorcha":function (character, system, action) {
-				system.setQuality("antorcha", true );
+			actions: {
+				"antorcha": function (character, system, action) {
+					system.setQuality("antorcha", true);
+				}
 			}
-		}
 		}
 	),
 	caminoosantorcha: new undum.SimpleSituation(
@@ -169,8 +171,55 @@ undum.game.situations = {
 		"<p>Por implementar</p>"
 	),
 
+
+
+
+	//Situacion 8 añadida. Faltan algunos href que seran implementados mas tarde.
+
 	segundoboss: new undum.SimpleSituation(
-		"<p>Por implementar</p>"
+		"<h1>Cueva del pangolin</h1>\
+	<p>Sin ningun temor, decides entrar al escondite del pangolín gigante y poner fin al \
+	oscuro futuro que le espera a la humanidad</p>\
+	<p>El pangolin, nada mas verte, realiza un grito que asustaría hasta al mismisimo Chuck Norris, pero \
+	tu te quedas ahi, sin inmutarte como un buen héroe.</p>\
+	<p>Decides <a href='./ataque'>realizar un ataque</a> o por el contrario <a>volver atrás</a>\
+	ya que no estas tan seguro de poder eliminar a este duro rival.</p>",
+		{
+			actions: {
+				"ataque": function (character, system, action) {
+					if (character.qualities.pangolines > 11) {
+						system.doLink("bossderrotado")
+					} else {
+						system.doLink("bossvive")
+					}
+				},
+				"volveratras": function (character, system, action) {
+					system.doLink("situacion7");   // Aqui hay que añadir el link con la situacion 7
+				}
+			}
+		}
+	),
+	bossderrotado: new undum.SimpleSituation(
+		"<h1>Cueva del pangolin</h1>\
+		<p>Esa feroz batalla que tuviste antes contra esos pangolines te ha servido para descubrir el punto débil \
+	de todos ellos, por lo que despues de marear un poco al pangolin realizas un ataque directo a su nariz, provocando\
+	su muerte en el momento.</p>\
+	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>",
+		{
+			actions: {
+				enter: function (character, system, action) {
+				//	system.setQuality("pangolin", true);   --> PEDRO: Quita el comentario de esto y ya tienes tu tarea 7.2 hecha
+				}
+			}
+		}
+
+	),
+	bossvive: new undum.SimpleSituation(
+		"<h1>Cueva del pangolin</h1>\
+		<p>Intentas atacar justo en el corazon, pero este se enrolla, parando tu ataque y realizando un contraataque que te manda fuera\
+	de la sala. Parece ser que no eres lo suficientemente fuerte para matarlo, por lo que debes de \
+	<a href='situacion7'>seguir entrenando</a> con los pequeños pangolines.\
+	</p>", // Falta añadir link a situacion 7
 	),
 };
 
@@ -184,23 +233,26 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-    manipulador: new undum.OnOffQuality(
-        "Manipulador de campos de energia cero", {priority:"0001", group:'inventario', onDisplay:"&#10003;"}
-    ),
+	manipulador: new undum.OnOffQuality(
+		"Manipulador de campos de energia cero", { priority: "0001", group: 'inventario', onDisplay: "&#10003;" }
+	),
 
 	baston: new undum.OnOffQuality(
-		"Baston", {priority:"0002", group:'inventario', onDisplay:"&#10003;"}
+		"Baston", { priority: "0002", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	antorcha: new undum.OnOffQuality(
-		"Antorcha", {priority:"0005", group:'inventario', onDisplay:"&#10003;"}
+		"Antorcha", { priority: "0005", group: 'inventario', onDisplay: "&#10003;" }
 	),
 
 	espada: new undum.OnOffQuality(
-		"Espada", {priority:"0003", group:'inventario', onDisplay:"&#10003;"}
+		"Espada", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 
 	pangolin: new undum.OnOffQuality(
-		"Pangolin", {priority:"0004", group:'inventario', onDisplay:"&#10003;"}
+		"Pangolin", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	pangolines: new undum.NonZeroIntegerQuality(
+		"Pangolines KO", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
 	)
 
 };
@@ -212,17 +264,18 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-    inventario: new undum.QualityGroup('Inventario', {priority:"0001"})
+	inventario: new undum.QualityGroup('Inventario', { priority: "0001" })
 };
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
-undum.game.init = function(character, system) {
-    system.setQuality( "manipulador" , false )
-	system.setQuality( "baston" , false )
-	system.setQuality( "espada", false )
-	system.setQuality( "pangolin", false )
-	system.setQuality( "antorcha" , false )
-    system.setCharacterText("<p>�Comienzas tu fascinante aventura!</p>");
+undum.game.init = function (character, system) {
+	system.setQuality("manipulador", false)
+	system.setQuality("baston", false)
+	system.setQuality("espada", false)
+	system.setQuality("pangolin", false)
+	system.setQuality("antorcha", false)
+	system.setQuality("pangolines", 0)
+	system.setCharacterText("<p>�Comienzas tu fascinante aventura!</p>");
 };
