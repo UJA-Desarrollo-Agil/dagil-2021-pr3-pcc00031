@@ -172,7 +172,33 @@ undum.game.situations = {
 	),
 
 
+	templocielo: new undum.SimpleSituation(
+		"<h1>El templo del cielo</h1> \
+	<p>Te adentras en las profundidades de este templo destruido, \
+	no sin antes usar un traje protector creado con la piel de aquel murciélago de Yambuku.</p></br> \
+	<p>Desde la entrada notas la presencia de decenas de pangolines, </br>\
+	además de una gran fuerza con un poder inimaginable (probablemente sea el Pangolín Gigante), \
+	seguramente no puedas acabar con ella sin antes descubrir los misterios de la cueva. </p></br> \
+	<p>Procedes a enfrentarte con los pangolines que te atacan: </p> </br>\
+	<p><ul><li><a href='pangolin'> Matar pangolín </a></li> \
+	<li><a href=''>Enfrentar al Pangolín Gigante</a></li></ul></p>"
+	),
 
+	pangolin: new undum.SimpleSituation(
+		"<h1>Matar pangolín</h1> \
+	<p>Te encuentras con los súbditos del Pangolín Gigante, decides:</p></br>\
+	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
+	<li><a href=''>Enfrentar al Pangolín Gigante</a></li></ul></p>",
+		{
+
+			actions: {
+				"pangolin-muerto": function (character, system, action) {
+					system.setQuality("pangolines", character.qualities.pangolines + 1);
+				}
+			}
+
+		}
+	),
 
 	//Situacion 8 añadida. Faltan algunos href que seran implementados mas tarde.
 
