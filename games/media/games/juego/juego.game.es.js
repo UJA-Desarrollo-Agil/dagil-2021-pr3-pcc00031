@@ -46,7 +46,7 @@ undum.game.situations = {
 	selectorciudad: new undum.SimpleSituation(
 		"<h1>Tienes que tomar una decisión.</h1>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
-		<h1><a href='africa'>Yambuku</a> o <a href='wuham'>Wuhan</a></h1></p>"
+		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a></h1></p>"
 	),
 
 	africa: new undum.SimpleSituation(
@@ -83,12 +83,73 @@ undum.game.situations = {
 				},
 			}
 		}
-
 	),
 
 
-	wuham: new undum.SimpleSituation(
+	wuhan: new undum.SimpleSituation(
+		"<h1>Wuhan</h1>\
+		<p>Aparentemente te encuentras ante una ciudad avanzada y cuidada, pero no eres consciente de los peligros que la desolan…</p></br>\
+		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto\
+		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>"
+	),
 
+ noticiapangolin: new undum.SimpleSituation(
+		"<h1>Wuhan</h1>\
+		<p>La ciudad está siendo controlada por el poder de una entidad despiadada, el Pangolín gigante. (<a href='vermas' class='once'>Ver más</a>)</p></p></br>\
+		<p>Amenaza a la ciudad obligando a los ciudadanos a que sacrifiquen a sus hijos cada mes para contentar sus deseos.</p>\
+		<p>Hace unos años el Pangolín gigante era más compasivo, pero últimamente ha empezado a pedir cada vez más niños \
+		para su ritual y no es posible ofrecer los sacrificios por lo que el Pangolín gigante \
+		está empezando a destrozar y amenazar a los habitantes de la ciudad así lo que todos viven con \
+		miedo y buscan a alguien que pueda luchar contra él.</p>\
+		<p><a href='huang' class='once'>Continuar</a></p>"
+	),
+
+	vermas: new undum.SimpleSituation(
+		"<h1>SOBRE EL PANGOLÍN GIGANTE</h1>\
+		<p>Efrey, también conocido actualmente como el Pangolín gigante, solía ser un pangolín que disfrutaba todos los días la vida que tenía, jugaba con sus amigos y \
+		aspiraba a formar una gran familia junto a su mejor amiga.</p>\
+		<p>Pasó el tiempo y finalmente construyó una familia con su amor. Mientras caminaba un día con sus hijos, se encontró unos humanos (situación bastante normal que no generaría ningún problema) \
+		y sin previo aviso, estos humanos se comieron a los hijos de nuestro amigo Efrey.</p>\
+		<p>Desde entonces, Efrey(Tiamat) ha odiado a los humanos y ha deseado castigarlos, por haberlo hecho sufrir de esa forma.</p>\
+		<p>Un día, mientras comía su comida favorita, empezó a crecer y a ganar un poder conmensurablemente alto, resulta que había digerido una fruta que otorgaba poderes a quien la consumía.</p>\
+		<p><p><a href='noticiapangolin' class='once'>Volver</a></p>"
+
+	),
+
+	huang: new undum.SimpleSituation(
+		"<h1>Wuhan</h1>\
+		<p>Durante el trayecto te encuentras con un hombre que transmite la sensación de que tiene información interesante que puede contarte. </p></br>\
+		<p>Por lo tanto <a href='conversacionhuang' class='once'>entablas una conversación con él</a>.</p>"
+	),
+
+	conversacionhuang: new undum.SimpleSituation(
+		"<h1>Wuhan</h1>\
+		<p class='dialogo'><strong>Huang: </strong>Nǐ hǎo, wǒ jiào Huang Vid, pareces nuevo en esta ciudad, en qué te puedo ayudar?\
+		<li> <a href='./diag1h' class='once'>¿Por qué todos tenéis los ojos así?</a> </li> \
+		<li> <a href='./diag2h' class='once'>¿Qué puedes contarme acerca de los Pangolines? </a></li></ul></p>",
+
+		{
+			actions: {
+				"diag1h": function (character, system, action) {
+					system.setCharacterText("<p>...</p>");
+				},
+
+				"diag2h": function (character, system, action) {
+					system.doLink("conversacionhuang2");
+				},
+			}
+		}
+	),
+
+	conversacionhuang2: new undum.SimpleSituation(
+		"<h1>Wuhan</h1>\
+		<p class='dialogo'><strong>Huang: </strong>Hoy es tu día de suerte, recientemente un estudio realizado por la Universidad de Wuhan, \
+		ha demostrado que una gran fuerza pangolinesca emana desde las ruinas de El Templo del Cielo.\
+		<p class='dialogo'>Desde hace 5 años, estas ruinas no han sido visitadas por nadie, de hecho, para acceder a ellas, \
+		 necesitas un traje especial sin él, es imposible adentrarse ahí dentro debido a la radiación pangolinesca.</p>\
+		 <p>Implementar</p>"
+
+		 //IMPLEMENTAR ENLACE A BOSS
 	),
 
 	cuevabossuno: new undum.SimpleSituation(
@@ -122,31 +183,77 @@ undum.game.situations = {
 						system.doLink("caminoosnoantorcha")
 					}
 
+				},
+			}
+		}
+	),
 
+	volvercuevabossuno: new undum.SimpleSituation(
+		"<h1>Cueva Frutal</h1>\
+	  <li> <a href='./caminonor' class='once'>Camino normal</a></li>\
+	  <li> <a href='./caminoes' class='once'>Camino estrecho</a> </li> \
+	  <li> <a href='./caminoos' class='once'>Camino oscuro</a></li></ul></p>",
+		{
+			actions: {
+				"caminonor": function (character, system, action) {
+					if (character.qualities.llave) {
+						system.doLink("caminonorllave");
+					} else {
+						system.doLink("caminonornollave");
+					}
+				},
 
+				"caminoes": function (character, system, action) {
+					if (character.qualities.antorcha) {
+						system.doLink("caminoyavisitado");
+					} else {
+						system.doLink("caminoes");
+					}
+				},
 
+				"caminoos": function (character, system, action) {
+					if (character.qualities.antorcha) {
+						if (character.qualities.llave) {
+							system.doLink("caminoyavisitado");
+						} else {
+							system.doLink("caminoosantorcha");
+						}
+					} else {
+						system.doLink("caminoosnoantorcha")
+					}
 
 				}
 			}
 		}
 	),
 	caminonornollave: new undum.SimpleSituation(
-		"	<h1>Cueva Frutal</h1>\
+		"<h1>Cueva Frutal</h1>\
 		<p>Tras andar un buen rato, divisas una puerta con un gran candado.</p>\
 		<p>Vaya, parece ser que no tienes la llave, pero tu intuicion te dice que la llave no estará muy lejos.</p>\
-		<p>Por ello, decides <a href='cuevabossuno'>volver atrás</a> y buscar en la cueva </p>"
+		<p>Por ello, decides <a href='volvercuevabossuno'>volver atrás</a> y buscar en la cueva.</p>"
 	),
 	caminonorllave: new undum.SimpleSituation(
-		//Em esta situacion abres la puerta y dejas un <a href que implementare yo mas tarde>
-		"POR IMPLEMENTAR"
+		//falta esto <a href='primerboss'>continuar tu aventura</a>
+		"<h1>Cueva Frutal</h1>\
+		<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
+		<p>Ya puedes *enlace* después de este quebradero de cabeza que te han dado\
+		los dichosos caminos de la cueva.</p>"
 	),
+
+	caminoyavisitado: new undum.SimpleSituation(
+		"<h1>Cueva Frutal</h1>\
+		<p>Deja de perder el tiempo buscando en sitios que ya has visitado e intenta\
+		<a href='volvercuevabossuno'>investigar otras zonas</a>.</p>"
+	),
+
 
 
 	caminoes: new undum.SimpleSituation(
-		"	<h1>Cueva Frutal</h1>\
+		"<h1>Cueva Frutal</h1>\
 		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.</p>\
-		<p>!QUE DRAMA!, tanto esfuerzo para nada. Solo encuentras una <a class='once' href='./antorcha'>antorcha</a> </p>\
-		<p>Solo puedes mirar a la pared, por lo que decides <a href='cuevabossuno'>volver atrás</a></p>",
+		<p>!QUE DRAMA!, tanto esfuerzo para nada. </p>\
+		<p>Solo encuentras una <a class='once' href='./antorcha'>antorcha</a>. </p>\
+		<p>Solo puedes mirar a la pared, por lo que decides <a href='volvercuevabossuno'>volver atrás</a>.</p>",
 		{
 			actions: {
 				"antorcha": function (character, system, action) {
@@ -156,14 +263,26 @@ undum.game.situations = {
 		}
 	),
 	caminoosantorcha: new undum.SimpleSituation(
-		//IMPLEMENTAR DIEGO AQUI PILLAS LA LLAVE al alumbrar con la antorcha recogida
-		"<p>Tienes antorcha</p>"
+		"<h1>Cueva Frutal</h1>\
+		<p>Ahora vas con tranquilidad por el camino oscuro con ayuda de la antorcha.</p>\
+		<p>!Por fin!, empiezas a ver algo de esperanza en tu aventura al ver el brillo de una <a class='once' href='./llave'>llave</a>\
+		que hay en el suelo.</p>\
+		<p>Debes <a href='volvercuevabossuno'>volver atrás</a> para probar la llave. </p>",
+		{
+			actions: {
+				"llave": function (character, system, action) {
+					system.setQuality("llave", true);
+				}
+			}
+		}
 
 	),
 	caminoosnoantorcha: new undum.SimpleSituation(
-		//IMPLEMENTAR DIEGO INVENTA ALGO ROLLO NO VEO UNA MIERDA Y TAL
-		"<p>No tienes una antorcha</p>"
-
+		"<h1>Cueva Frutal</h1>\
+		<p>Te atreves a ir por el camino oscuro. </p></br> \
+	  <p>No tardas mucho tiempo en darte cuenta de que como sigas por este camino vas a tarda más\
+	  en encontrar algo de valor que en acabar una ingeniería. </p></br>\
+	  <p>Por lo tanto no te queda otra que <a href='volvercuevabossuno'>volver a la cueva</a>.</p></br>"
 	),
 
 
@@ -188,7 +307,7 @@ undum.game.situations = {
 		"<h1>Matar pangolín</h1> \
 	<p>Te encuentras con los súbditos del Pangolín Gigante, decides:</p></br>\
 	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
-	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
+	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul>.</p>",
 		{
 
 			actions: {
@@ -234,7 +353,7 @@ undum.game.situations = {
 		{
 			actions: {
 				enter: function (character, system, action) {
-					system.setQuality("pangolin", true);  
+					system.setQuality("pangolin", true);
 				}
 			}
 		}
@@ -266,8 +385,13 @@ undum.game.qualities = {
 	baston: new undum.OnOffQuality(
 		"Baston", { priority: "0002", group: 'inventario', onDisplay: "&#10003;" }
 	),
+
 	antorcha: new undum.OnOffQuality(
 		"Antorcha", { priority: "0005", group: 'inventario', onDisplay: "&#10003;" }
+	),
+
+	llave: new undum.OnOffQuality(
+		"Llave", { priority: "0005", group: 'inventario', onDisplay: "&#10003;" }
 	),
 
 	espada: new undum.OnOffQuality(
@@ -277,6 +401,7 @@ undum.game.qualities = {
 	pangolin: new undum.OnOffQuality(
 		"Pangolin", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
 	),
+
 	pangolines: new undum.NonZeroIntegerQuality(
 		"Pangolines KO", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
 	)
@@ -302,6 +427,7 @@ undum.game.init = function (character, system) {
 	system.setQuality("espada", false)
 	system.setQuality("pangolin", false)
 	system.setQuality("antorcha", false)
+	system.setQuality("llave", false)
 	system.setQuality("pangolines", 0)
 	system.setCharacterText("<p>�Comienzas tu fascinante aventura!</p>");
 };
