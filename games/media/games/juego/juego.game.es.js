@@ -233,11 +233,10 @@ undum.game.situations = {
 		<p>Por ello, decides <a href='volvercuevabossuno'>volver atrás</a> y buscar en la cueva.</p>"
 	),
 	caminonorllave: new undum.SimpleSituation(
-		//falta esto <a href='primerboss'>continuar tu aventura</a>
+		
 		"<h1>Cueva Frutal</h1>\
 		<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
-		<p>Ya puedes <a href='primerBoss'>entrar al escondite</a>  después de este quebradero de cabeza que te han dado\
-		los dichosos caminos de la cueva.</p>"
+		<p>Ya puedes <a href='primerBoss'>entrar al escondite</a> y derrotar a este terrible monstruo</p>"
 	),
 
 	caminoyavisitado: new undum.SimpleSituation(
@@ -339,7 +338,7 @@ undum.game.situations = {
 					}
 				},
 				"volveratras": function (character, system, action) {
-					system.doLink("pangolin");   // Aqui hay que añadir el link con la situacion 7
+					system.doLink("pangolin");   
 				}
 			}
 		}
@@ -350,7 +349,7 @@ undum.game.situations = {
 	de todos ellos, por lo que despues de marear un poco al pangolin realizas un ataque directo a su nariz, provocando\
 	su muerte en el momento.</p>\
 	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>\
-	<p>Sin nada mas que poder hacer, decides <a href='situacion9'>salir de la cueva </a></p>" // CAMBIAR HREF AL NOMBRE DE LA SITUACION
+	<p>Sin nada mas que poder hacer, decides <a href='situacion9'>salir de la cueva </a></p>" // CAMBIAR HREF AL NOMBRE DE LA SITUACION (VENZA)
 	,
 		{
 			actions: {
