@@ -18,6 +18,10 @@ undum.game.version = "1.0";
 // En modo depuraci�n, que no haya efectos de jquery
 jQuery.fx.off = false
 
+
+// Audio
+var ini = document.getElementById("ini");
+var inter = document.getElementById("inter");
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
 	start: new undum.SimpleSituation(
@@ -28,7 +32,7 @@ undum.game.situations = {
 			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>",
 		{
 			actions: {
-				enter: function (character, system, action) {
+				enter: function (character, system, from) {
 					ini.play();
 				},
 				"baston": function (character, system, action) {
@@ -51,11 +55,11 @@ undum.game.situations = {
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
 		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a></h1></p>",
 		{
-			actions:{
-				enter: function (character, system, action) {
+			
+				enter: function (character, system, from) {
 					ini.play();
-				},
-			}
+				}
+			
 		}
 	),
 
@@ -220,6 +224,10 @@ undum.game.situations = {
 	<li> <a href='./caminoes' class='once'>Camino estrecho</a> </li> \
 	<li> <a href='./caminoos' class='once'>Camino oscuro</a></li></ul></p>",
 		{
+			enter: function (character, system, from){
+				ini.pause();
+				inter.play();
+			},
 			actions: {
 				"caminonor": function (character, system, action) {
 					if (character.qualities.llave) {
