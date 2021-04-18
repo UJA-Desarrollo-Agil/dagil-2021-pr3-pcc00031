@@ -28,6 +28,9 @@ undum.game.situations = {
 			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>",
 		{
 			actions: {
+				enter: function (character, system, action) {
+					ini.play();
+				},
 				"baston": function (character, system, action) {
 					system.setQuality("baston", true);
 					system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
@@ -46,7 +49,14 @@ undum.game.situations = {
 	selectorciudad: new undum.SimpleSituation(
 		"<h1>Tienes que tomar una decisión.</h1>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
-		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a></h1></p>"
+		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a></h1></p>",
+		{
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 	),
 
 	africa: new undum.SimpleSituation(
@@ -65,6 +75,9 @@ undum.game.situations = {
 		<li> <a href='./diag3' class='once'>¿Qué opinas sobre las metodologías ágiles? </a></li></ul></p>",
 		{
 			actions: {
+				enter: function (character, system, action) {
+					ini.play();
+				},
 				"diag1": function (character, system, action) {
 
 					system.setCharacterText("<p>Los murciélagos se sitúan en zonas cálidas y regiones con alta afluencia de árboles frutales. Al sur de esta aldea podrás encontrar esta zona. </p>");
@@ -90,7 +103,14 @@ undum.game.situations = {
 		"<h1>Wuhan</h1>\
 		<p>Aparentemente te encuentras ante una ciudad avanzada y cuidada, pero no eres consciente de los peligros que la desolan…</p></br>\
 		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto\
-		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>"
+		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>",
+		{
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 	),
 
  noticiapangolin: new undum.SimpleSituation(
@@ -101,7 +121,14 @@ undum.game.situations = {
 		para su ritual y no es posible ofrecer los sacrificios por lo que el Pangolín gigante \
 		está empezando a destrozar y amenazar a los habitantes de la ciudad así lo que todos viven con \
 		miedo y buscan a alguien que pueda luchar contra él.</p>\
-		<p><a href='huang' class='once'>Continuar</a></p>"
+		<p><a href='huang' class='once'>Continuar</a></p>",
+		{
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 	),
 
 	vermas: new undum.SimpleSituation(
@@ -112,14 +139,28 @@ undum.game.situations = {
 		y sin previo aviso, estos humanos se comieron a los hijos de nuestro amigo Efrey.</p>\
 		<p>Desde entonces, Efrey(Tiamat) ha odiado a los humanos y ha deseado castigarlos, por haberlo hecho sufrir de esa forma.</p>\
 		<p>Un día, mientras comía su comida favorita, empezó a crecer y a ganar un poder conmensurablemente alto, resulta que había digerido una fruta que otorgaba poderes a quien la consumía.</p>\
-		<p><p><a href='noticiapangolin' class='once'>Volver</a></p>"
+		<p><p><a href='noticiapangolin' class='once'>Volver</a></p>",
+		{
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 
 	),
 
 	huang: new undum.SimpleSituation(
 		"<h1>Wuhan</h1>\
 		<p>Durante el trayecto te encuentras con un hombre que transmite la sensación de que tiene información interesante que puede contarte. </p></br>\
-		<p>Por lo tanto <a href='conversacionhuang' class='once'>entablas una conversación con él</a>.</p>"
+		<p>Por lo tanto <a href='conversacionhuang' class='once'>entablas una conversación con él</a>.</p>",
+		{
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 	),
 
 	conversacionhuang: new undum.SimpleSituation(
@@ -130,6 +171,9 @@ undum.game.situations = {
 
 		{
 			actions: {
+				enter: function (character, system, action) {
+					ini.play();
+				},
 				"diag1h": function (character, system, action) {
 					system.setCharacterText("<p>...</p>");
 				},
@@ -147,7 +191,14 @@ undum.game.situations = {
 		ha demostrado que una gran fuerza pangolinesca emana desde las ruinas de El Templo del Cielo.\
 		<p class='dialogo'>Desde hace 5 años, estas ruinas no han sido visitadas por nadie, de hecho, para acceder a ellas, \
 		 necesitas un traje especial sin él, es imposible adentrarse ahí dentro debido a la radiación pangolinesca.</p>\
-		 <p>Implementar</p>"
+		 <p>Implementar</p>",
+		 {
+			actions:{
+				enter: function (character, system, action) {
+					ini.play();
+				},
+			}
+		}
 
 		 //IMPLEMENTAR ENLACE A BOSS
 	),
