@@ -146,9 +146,12 @@ undum.game.situations = {
 		aspiraba a formar una gran familia junto a su mejor amiga.</p>\
 		<p>Pasó el tiempo y finalmente construyó una familia con su amor. Mientras caminaba un día con sus hijos, se encontró unos humanos (situación bastante normal que no generaría ningún problema) \
 		y sin previo aviso, estos humanos se comieron a los hijos de nuestro amigo Efrey.</p>\
-		<p>Desde entonces, Efrey(Tiamat) ha odiado a los humanos y ha deseado castigarlos, por haberlo hecho sufrir de esa forma.</p>\
+		<p>Desde entonces, Efrey ha odiado a los humanos y ha deseado castigarlos, por haberlo hecho sufrir de esa forma.</p>\
 		<p>Un día, mientras comía su comida favorita, empezó a crecer y a ganar un poder conmensurablemente alto, resulta que había digerido una fruta que otorgaba poderes a quien la consumía.</p>\
-		<p><p><a href='noticiapangolin' class='once'>Volver</a></p>",
+		<p>Gracias a este poder comenzó a plantarle cara a los humanos y a obligar que les dieran a sus hijos como sacrificio para así completar su venganza. \
+		Aunque esto no era suficiente para satisfacer su necesidades…</p>\
+		<p>Efrey había conseguido un ejército de pangolines y actualmente está desarrollando un virus con el que es posible que aniquile a todos los humanos.</p>\
+		<p><a href='noticiapangolin' class='once'>Volver</a></p>",
 		{
 			actions:{
 				enter: function (character, system, action) {
@@ -201,12 +204,14 @@ undum.game.situations = {
 		<p class='dialogo'>Desde hace 5 años, estas ruinas no han sido visitadas por nadie, de hecho, para acceder a ellas, \
 		 necesitas un traje especial sin él, es imposible adentrarse ahí dentro debido a la radiación pangolinesca.</p>\
 		 <p>Debes <a href='./irtemplocielo' class='once'>continuar tu aventura.</a></p>",
-		 { //AQUÍ DEPENDE DE SI HA DERROTADO AL OTRO BOSS Y TIENE LA PIEL
+		 {
 			actions:{
 				"irtemplocielo": function (character, system, action) {
 					if (character.qualities.llave) {
+						system.write("<h1>Te diriges al Templo del Cielo</h1>");
 						system.doLink("templocielo");
 					} else {
+						system.write("<h1>Te diriges a Yambuku ya que no puedes acceder al Templo del Cielo</h1>");
 						system.doLink("africa");
 					}
 			},
@@ -215,8 +220,6 @@ undum.game.situations = {
 				},
 			}
 		}
-
-		 //IMPLEMENTAR ENLACE A BOSS
 	),
 
 	cuevabossuno: new undum.SimpleSituation(
@@ -444,7 +447,7 @@ undum.game.situations = {
 		"<h1>Matar pangolín</h1> \
 	<p>Te encuentras con los súbditos del Pangolín Gigante, decides:</p></br>\
 	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
-	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul>.</p>",
+	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
 		{
 
 			actions: {
