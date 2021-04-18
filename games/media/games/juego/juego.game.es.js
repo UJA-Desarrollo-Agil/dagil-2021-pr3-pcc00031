@@ -114,6 +114,11 @@ undum.game.situations = {
 		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto. \
 		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>",
 		{
+		
+			enter: function (character, system, from){
+				boss.pause();
+				ini.play();
+			},
 			actions:{
 				enter: function (character, system, action) {
 					ini.play();
@@ -441,6 +446,12 @@ undum.game.situations = {
 	<p>Procedes a enfrentarte con los pangolines que te atacan: </p> </br>\
 	<p><ul><li><a href='pangolin'> Matar pangolín </a></li> \
 	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
+	{
+			enter: function (character, system, from){
+				ini.pause(); 
+				inter.play();
+			}
+			}
 	),
 
 	pangolin: new undum.SimpleSituation(
