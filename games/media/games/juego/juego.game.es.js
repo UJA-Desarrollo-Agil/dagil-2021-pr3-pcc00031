@@ -291,10 +291,22 @@ undum.game.situations = {
 		<p>Por ello, decides <a href='volvercuevabossuno'>volver atrás</a> y buscar en la cueva.</p>"
 	),
 	caminonorllave: new undum.SimpleSituation(
+	"<p></p>",
+		
+		{
+			enter: function(character, system, from){
+				if(character.qualities.baston){
+					system.write("<h1>Cueva Frutal</h1>\
+								<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
+								<p>Ya puedes <a href='primerbossmago'>entrar al escondite</a> y derrotar a este terrible monstruo</p>");
+				}if(character.qualities.espada){
+					system.write("<h1>Cueva Frutal</h1>\
+								<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
+								<p>Ya puedes <a href='primerbossguerrero'>entrar al escondite</a> y derrotar a este terrible monstruo</p>");
+				}
+			}
 
-		"<h1>Cueva Frutal</h1>\
-		<p>Efectivamente, la llave que has encontrado es la que abre el candado. </p>\
-		<p>Ya puedes <a href='primerBoss'>entrar al escondite</a> y derrotar a este terrible monstruo</p>"
+		}
 	),
 
 	caminoyavisitado: new undum.SimpleSituation(
@@ -343,9 +355,56 @@ undum.game.situations = {
 	),
 
 
-	primerboss: new undum.SimpleSituation(
-		"<p>Por implementar</p>"
-	),
+	primerbossmago: new undum.SimpleSituation(
+		"<p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
+		peligroso si no piensas una estrategia y cómo defenderte antes.\
+		Vaya, eres el primer mago que solo ha practicado un tipo de ataque, pero es tan letal\
+ 		que de un solo golpe derrotarás a cualquier enemigo. Por ende, decides usar lechazo mágico\
+		para poder acabar con él.</p></br>\
+ 		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
+		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el lechazo mágico.\
+		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
+		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la siguiente ciudad.</p></br>",
+		{
+			actions: {
+				"cabezamurcielago": function (character, system, action) {
+							system.setQuality("cabezamurcielago", true);
+							system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
+							},
+				"pielmurcielago": function (character, system, action) {
+							system.setQuality("pielmurcielago", true);
+							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
+										tiene una propiedad que te hace inmune al virus de china</p>");
+							}
+				}	
+		}
+),
+
+	primerbossguerrero: new undum.SimpleSituation(
+		"<p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
+		peligroso si no piensas una estrategia y cómo defenderte antes.\
+		Vaya, eres el primer guerrero que solo ha practicado un tipo de ataque, pero es tan letal\
+ 		que de un solo golpe derrotarás a cualquier enemigo. Por ende, decides usar barrigazo bacoriano\
+		para poder acabar con él.</p></br>\
+ 		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
+		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el barrigazo bacoriano.\
+		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
+		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la siguiente ciudad.</p></br>",
+		{
+			actions: {
+				"cabezamurcielago": function (character, system, action) {
+							system.setQuality("cabezamurcielago", true);
+							system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
+							},
+				"pielmurcielago": function (character, system, action) {
+							system.setQuality("pielmurcielago", true);
+							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
+										tiene una propiedad que te hace inmune al virus de china</p>");
+							}
+				}	
+		}
+),
+	
 
 
 	templocielo: new undum.SimpleSituation(
