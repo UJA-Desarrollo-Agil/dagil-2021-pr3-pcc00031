@@ -236,7 +236,7 @@ undum.game.situations = {
 		//falta esto <a href='primerboss'>continuar tu aventura</a>
 		"<h1>Cueva Frutal</h1>\
 		<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
-		<p>Ya puedes *enlace* después de este quebradero de cabeza que te han dado\
+		<p>Ya puedes <a href='primerBoss'>entrar al escondite</a>  después de este quebradero de cabeza que te han dado\
 		los dichosos caminos de la cueva.</p>"
 	),
 
@@ -339,7 +339,7 @@ undum.game.situations = {
 					}
 				},
 				"volveratras": function (character, system, action) {
-					system.doLink("situacion7");   // Aqui hay que añadir el link con la situacion 7
+					system.doLink("pangolin");   // Aqui hay que añadir el link con la situacion 7
 				}
 			}
 		}
@@ -349,7 +349,9 @@ undum.game.situations = {
 		<p>Esa feroz batalla que tuviste antes contra esos pangolines te ha servido para descubrir el punto débil \
 	de todos ellos, por lo que despues de marear un poco al pangolin realizas un ataque directo a su nariz, provocando\
 	su muerte en el momento.</p>\
-	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>",
+	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>\
+	<p>Sin nada mas que poder hacer, decides <a href='situacion9'>salir de la cueva </a></p>" // CAMBIAR HREF AL NOMBRE DE LA SITUACION
+	,
 		{
 			actions: {
 				enter: function (character, system, action) {
@@ -363,7 +365,7 @@ undum.game.situations = {
 		"<h1>Cueva del pangolin</h1>\
 		<p>Intentas atacar justo en el corazon, pero este se enrolla, parando tu ataque y realizando un contraataque que te manda fuera\
 	de la sala. Parece ser que no eres lo suficientemente fuerte para matarlo, por lo que debes de \
-	<a href='situacion7'>seguir entrenando</a> con los pequeños pangolines.\
+	<a href='pangolin'>seguir entrenando</a> con los pequeños pangolines.\
 	</p>", // Falta añadir link a situacion 7
 	),
 };
