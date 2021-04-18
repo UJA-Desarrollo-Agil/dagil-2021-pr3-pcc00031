@@ -102,7 +102,7 @@ undum.game.situations = {
 	wuhan: new undum.SimpleSituation(
 		"<h1>Wuhan</h1>\
 		<p>Aparentemente te encuentras ante una ciudad avanzada y cuidada, pero no eres consciente de los peligros que la desolan…</p></br>\
-		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto\
+		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto. \
 		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>",
 		{
 			actions:{
@@ -191,9 +191,16 @@ undum.game.situations = {
 		ha demostrado que una gran fuerza pangolinesca emana desde las ruinas de El Templo del Cielo.\
 		<p class='dialogo'>Desde hace 5 años, estas ruinas no han sido visitadas por nadie, de hecho, para acceder a ellas, \
 		 necesitas un traje especial sin él, es imposible adentrarse ahí dentro debido a la radiación pangolinesca.</p>\
-		 <p>Implementar</p>",
-		 {
+		 <p>Debes <a href='./irtemplocielo' class='once'>continuar tu aventura.</a></p>",
+		 { //AQUÍ DEPENDE DE SI HA DERROTADO AL OTRO BOSS Y TIENE LA PIEL
 			actions:{
+				"irtemplocielo": function (character, system, action) {
+					if (character.qualities.llave) {
+						system.doLink("templocielo");
+					} else {
+						system.doLink("africa");
+					}
+			},
 				enter: function (character, system, action) {
 					ini.play();
 				},
@@ -284,9 +291,9 @@ undum.game.situations = {
 		<p>Por ello, decides <a href='volvercuevabossuno'>volver atrás</a> y buscar en la cueva.</p>"
 	),
 	caminonorllave: new undum.SimpleSituation(
-		
+
 		"<h1>Cueva Frutal</h1>\
-		<p>Efectivamente, la llave que has encontrado es la que abre el candado.</p>\
+		<p>Efectivamente, la llave que has encontrado es la que abre el candado. </p>\
 		<p>Ya puedes <a href='primerBoss'>entrar al escondite</a> y derrotar a este terrible monstruo</p>"
 	),
 
@@ -389,7 +396,7 @@ undum.game.situations = {
 					}
 				},
 				"volveratras": function (character, system, action) {
-					system.doLink("pangolin");   
+					system.doLink("pangolin");
 				}
 			}
 		}
@@ -481,5 +488,5 @@ undum.game.init = function (character, system) {
 	system.setQuality("antorcha", false)
 	system.setQuality("llave", false)
 	system.setQuality("pangolines", 0)
-	system.setCharacterText("<p>�Comienzas tu fascinante aventura!</p>");
+	system.setCharacterText("<p>Comienzas tu fascinante aventura!</p>");
 };
