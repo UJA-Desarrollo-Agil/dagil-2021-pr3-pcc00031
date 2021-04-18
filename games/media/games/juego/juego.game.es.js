@@ -364,7 +364,7 @@ undum.game.situations = {
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el lechazo mágico.\
 		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la siguiente ciudad.</p></br>",
+		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
 			actions: {
 				"cabezamurcielago": function (character, system, action) {
@@ -389,7 +389,7 @@ undum.game.situations = {
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el barrigazo bacoriano.\
 		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la siguiente ciudad.</p></br>",
+		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
 			actions: {
 				"cabezamurcielago": function (character, system, action) {
