@@ -22,6 +22,9 @@ jQuery.fx.off = false
 // Audio
 var ini = document.getElementById("ini");
 var inter = document.getElementById("inter");
+var boss = document.getElementById("boss");
+
+
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
 	start: new undum.SimpleSituation(
@@ -49,6 +52,8 @@ undum.game.situations = {
 			}
 		}
 	),
+
+	
 
 	selectorciudad: new undum.SimpleSituation(
 		"<h1>Tienes que tomar una decisión.</h1>\
@@ -372,8 +377,12 @@ undum.game.situations = {
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el lechazo mágico.\
 		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
+		Finalmente, decides llevarte la cabeza y la <a href='./pielmurcielago' class='once'>piel del murciélago</a> como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
+			enter: function (character, system, from){
+				inter.pause();
+				boss.play();
+			},
 			actions: {
 				"cabezamurcielago": function (character, system, action) {
 							system.setQuality("cabezamurcielago", true);
@@ -397,8 +406,12 @@ undum.game.situations = {
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el barrigazo bacoriano.\
 		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
+		Finalmente, decides llevarte la cabeza y <a href='./pielmurcielago' class='once'>piel del murciélago</a> como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
+			enter: function (character, system, from){
+				inter.pause();
+				boss.play();
+			},
 			actions: {
 				"cabezamurcielago": function (character, system, action) {
 							system.setQuality("cabezamurcielago", true);
@@ -424,7 +437,7 @@ undum.game.situations = {
 	seguramente no puedas acabar con ella sin antes descubrir los misterios de la cueva. </p></br> \
 	<p>Procedes a enfrentarte con los pangolines que te atacan: </p> </br>\
 	<p><ul><li><a href='pangolin'> Matar pangolín </a></li> \
-	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>"
+	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
 	),
 
 	pangolin: new undum.SimpleSituation(
@@ -457,9 +470,9 @@ undum.game.situations = {
 			actions: {
 				"ataque": function (character, system, action) {
 					if (character.qualities.pangolines > 11) {
-						system.doLink("bossderrotado")
+						system.doLink("bossderrotado");
 					} else {
-						system.doLink("bossvive")
+						system.doLink("bossvive");
 					}
 				},
 				"volveratras": function (character, system, action) {
@@ -474,8 +487,7 @@ undum.game.situations = {
 	de todos ellos, por lo que despues de marear un poco al pangolin realizas un ataque directo a su nariz, provocando\
 	su muerte en el momento.</p>\
 	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>\
-	<p>Sin nada mas que poder hacer, decides <a href='situacion9'>salir de la cueva </a></p>" // CAMBIAR HREF AL NOMBRE DE LA SITUACION (VENZA)
-	,
+	<p>Sin nada mas que poder hacer, decides <a href='fin'>salir de la cueva </a></p>",
 		{
 			actions: {
 				enter: function (character, system, action) {
@@ -485,13 +497,22 @@ undum.game.situations = {
 		}
 
 	),
+
+	
 	bossvive: new undum.SimpleSituation(
 		"<h1>Cueva del pangolin</h1>\
 		<p>Intentas atacar justo en el corazon, pero este se enrolla, parando tu ataque y realizando un contraataque que te manda fuera\
 	de la sala. Parece ser que no eres lo suficientemente fuerte para matarlo, por lo que debes de \
-	<a href='pangolin'>seguir entrenando</a> con los pequeños pangolines.\
-	</p>", // Falta añadir link a situacion 7
+	<a href='pangolin'>seguir entrenando</a> con los pequeños pangolines.</p>", // Falta añadir link a situacion 7
 	),
+
+	fin: new undum.SimpleSituation(
+	"<h1> FIN </h1>\
+	<p>¡Enhorabuena! Has conseguido salvar a la humanidad de los distintos peligros que la acechaban.\
+	Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>",
+	)
+
+	
 };
 
 
@@ -504,8 +525,8 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-	manipulador: new undum.OnOffQuality(
-		"Manipulador de campos de energia cero", { priority: "0001", group: 'inventario', onDisplay: "&#10003;" }
+	pielmurcielago: new undum.OnOffQuality(
+		"Piel Murciélago", { priority: "0006", group: 'inventario', onDisplay: "&#10003;" }
 	),
 
 	baston: new undum.OnOffQuality(
@@ -548,7 +569,7 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
-	system.setQuality("manipulador", false)
+	system.setQuality("pielmurcielago", false)
 	system.setQuality("baston", false)
 	system.setQuality("espada", false)
 	system.setQuality("pangolin", false)
