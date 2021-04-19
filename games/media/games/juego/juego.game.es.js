@@ -220,11 +220,11 @@ undum.game.situations = {
 			},
 			actions:{
 				"irtemplocielo": function (character, system, action) {
-					if (character.qualities.llave) {
+					if (character.qualities.pielmurcielago) {
 						system.write("<h1>Te diriges al Templo del Cielo</h1>");
 						system.doLink("templocielo");
 					} else {
-						system.write("<h1>Te diriges a Yambuku ya que no puedes acceder al Templo del Cielo</h1>");
+						system.write("<h1>Te diriges a Yambuku ya que no puedes acceder al Templo del Cielo aún. </h1>");
 						system.doLink("africa");
 					}
 			},
