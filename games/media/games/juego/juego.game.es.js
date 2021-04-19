@@ -120,9 +120,6 @@ undum.game.situations = {
 			enter: function (character, system, from){
 				boss.pause();
 				ini.play();
-			},
-			actions:{
-
 			}
 		}
 	),
@@ -139,9 +136,6 @@ undum.game.situations = {
 		{
 			enter: function (character, system, from) {
 				ini.play();
-			},
-			actions:{
-
 			}
 		}
 	),
@@ -161,12 +155,8 @@ undum.game.situations = {
 		{
 			enter: function (character, system, from) {
 				ini.play();
-			},
-			actions:{
-
 			}
 		}
-
 	),
 
 	huang: new undum.SimpleSituation(
@@ -176,10 +166,6 @@ undum.game.situations = {
 		{
 			enter: function (character, system, from) {
 				ini.play();
-			},
-			actions:{
-
-
 			}
 		}
 	),
@@ -228,7 +214,6 @@ undum.game.situations = {
 						system.doLink("africa");
 					}
 			},
-
 			}
 		}
 	),
@@ -312,12 +297,14 @@ undum.game.situations = {
 			}
 		}
 	),
+
 	caminonornollave: new undum.SimpleSituation(
 		"<h1>Cueva Frutal</h1>\
 		<p>Tras andar un buen rato, divisas una puerta con un gran candado.</p>\
 		<p>Vaya, parece ser que no tienes la llave, pero tu intuicion te dice que la llave no estará muy lejos.</p>\
 		<p>Por ello, decides <a href='volvercuevabossuno'>volver atrás</a> y buscar en la cueva.</p>"
 	),
+
 	caminonorllave: new undum.SimpleSituation(
 	"<p></p>",
 
@@ -343,8 +330,6 @@ undum.game.situations = {
 		<a href='volvercuevabossuno'>investigar otras zonas</a>.</p>"
 	),
 
-
-
 	caminoes: new undum.SimpleSituation(
 		"<h1>Cueva Frutal</h1>\
 		<p>Consigues pasar por esa pequeña brecha, aunque con bastantes problemas, y llegas a un callejon sin salida.</p>\
@@ -359,6 +344,7 @@ undum.game.situations = {
 			}
 		}
 	),
+
 	caminoosantorcha: new undum.SimpleSituation(
 		"<h1>Cueva Frutal</h1>\
 		<p>Ahora vas con tranquilidad por el camino oscuro con ayuda de la antorcha.</p>\
@@ -372,8 +358,8 @@ undum.game.situations = {
 				}
 			}
 		}
-
 	),
+
 	caminoosnoantorcha: new undum.SimpleSituation(
 		"<h1>Cueva Frutal</h1>\
 		<p>Te atreves a ir por el camino oscuro. </p></br> \
@@ -381,7 +367,6 @@ undum.game.situations = {
 	  en encontrar algo de valor que en acabar una ingeniería. </p></br>\
 	  <p>Por lo tanto no te queda otra que <a href='volvercuevabossuno'>volver a la cueva</a>.</p></br>"
 	),
-
 
 	primerbossmago: new undum.SimpleSituation(
 		"<p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
@@ -404,18 +389,6 @@ undum.game.situations = {
 			}
 	}
 ),
-/*
-actions: {
-	"cabezamurcielago": function (character, system, action) {
-				system.setQuality("cabezamurcielago", true);
-				system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
-				},
-	"pielmurcielago": function (character, system, action) {
-				system.setQuality("pielmurcielago", true);
-				system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
-							tiene una propiedad que te hace inmune al virus de china</p>");
-				}
-	}*/
 
 	primerbossguerrero: new undum.SimpleSituation(
 		"<p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
@@ -438,8 +411,6 @@ actions: {
 			}
 		}
 ),
-
-
 
 	templocielo: new undum.SimpleSituation(
 		"<h1>El templo del cielo</h1> \
@@ -487,17 +458,18 @@ actions: {
 	oscuro futuro que le espera a la humanidad</p>\
 	<p>El pangolin, nada mas verte, realiza un grito que asustaría hasta al mismisimo Chuck Norris, pero \
 	tu te quedas ahi, sin inmutarte como un buen héroe.</p>\
-	<p>Decides <a href='./ataque'>realizar un ataque</a> o por el contrario <a>volver atrás</a>\
+	<p>Decides <a href='./ataque'>realizar un ataque</a> o por el contrario <a href='./volveratras'>volver atrás</a>\
 	ya que no estas tan seguro de poder eliminar a este duro rival.</p>",
 		{
 			enter: function (character, system, from){
 				inter.pause();
 				boss.play();
-				system.setQuality("porcentaje", character.qualities.porcentaje + 50);
 			},
 			actions: {
 				"ataque": function (character, system, action) {
 					if (character.qualities.pangolines > 11) {
+						system.setQuality("porcentaje", character.qualities.porcentaje + 50);
+						system.setQuality("pangolin", true);
 						system.doLink("bossderrotado");
 					} else {
 						system.doLink("bossvive");
@@ -509,23 +481,15 @@ actions: {
 			}
 		}
 	),
+
 	bossderrotado: new undum.SimpleSituation(
 		"<h1>Cueva del pangolin</h1>\
 		<p>Esa feroz batalla que tuviste antes contra esos pangolines te ha servido para descubrir el punto débil \
 	de todos ellos, por lo que despues de marear un poco al pangolin realizas un ataque directo a su nariz, provocando\
 	su muerte en el momento.</p>\
 	<p>Tras ver como cae derrotado, decides cortar su cabeza para llevartela como trofeo.</p>\
-	<p>Sin nada mas que poder hacer, decides <a href='fin'>salir de la cueva </a></p>",
-		{
-			actions: {
-				enter: function (character, system, action) {
-					system.setQuality("pangolin", true);
-				}
-			}
-		}
-
+	<p>Sin nada mas que poder hacer, decides <a href='fin'>salir de la cueva</a>. </p>"
 	),
-
 
 	bossvive: new undum.SimpleSituation(
 		"<h1>Cueva del pangolin</h1>\
@@ -538,9 +502,13 @@ actions: {
 	"<h1> FIN </h1>\
 	<p>¡Enhorabuena! Has conseguido salvar a la humanidad de los distintos peligros que la acechaban.\
 	Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>",
-	)
-
-
+	{
+		enter: function (character, system, from){
+			boss.pause();
+			ini.play();
+		}
+	}
+)
 };
 
 
@@ -578,7 +546,7 @@ undum.game.qualities = {
 	),
 
 	pangolin: new undum.OnOffQuality(
-		"Pangolin", { priority: "0004", group: 'trofeos', onDisplay: "&#10003;" }
+		"Cabeza Pangolín", { priority: "0004", group: 'trofeos', onDisplay: "&#10003;" }
 	),
 
 	pangolines: new undum.NonZeroIntegerQuality(
