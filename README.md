@@ -37,6 +37,32 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 ![5](https://user-images.githubusercontent.com/66868520/113693225-ade7a180-96ce-11eb-953f-466bc55e63a9.jpeg)
 ![6](https://user-images.githubusercontent.com/78795146/113693465-ec7d5c00-96ce-11eb-936c-ccda746b7e07.jpeg)
 
+## (Práctica 4) Consecuencias del Sprint Review
+
+Se ha hecho todo lo que estaba planeado en un tiempo razonable.
+No han habido cambios en el product backlog desde que hicimos el PRB.
+
+ - **Cosas que han salido bien:**
+Todas las historias de usuario han sido implementadas.
+El reparto de tareas se ha realizado de manera efectiva tal y como estaba organizado.
+Hemos estado al tanto diariamente haciendo el Daily Scrum.
+
+ - **Problemas encontrados:**
+Dificultades en la puesta en común de un horario para hacer el Daily Scrum.
+Crear la idea principal del juego, ya que fue lo que más tardamos en decidir entre todos.
+
+ - **Soluciones aplicadas:**
+Reuniones de menor duración pero más frecuentes.
+
+ - **¿Qué es lo siguiente?:**
+Para el siguiente Sprint, tenemos aún una historia de usuario de valor innegociable, por lo tanto deberá de ser implementada. 
+Por lo tanto tendremos en cuenta las historias de usuario que más valor tengan para añadirlas a una siguiente versión del juego.
+
+ - **Revisión de plazos:**
+Creemos que, al menos, todas las tareas innegociables que faltan serán implementadas sin problema en poco tiempo.
+
+ - **Conclusión:**
+A pesar de que fuimos bastante optimistas a la hora de elegir historias de usuario, finalmente hemos conseguido llevarlas todas a cabo de forma organizada ajustándonos al plazo previsto.
 
 ## (Práctica 4) Explicación de historias de usuario seleccionadas.
   1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
