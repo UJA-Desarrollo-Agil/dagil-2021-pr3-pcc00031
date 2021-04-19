@@ -1,6 +1,8 @@
 
 # ROL ADVENTURE (provisional)
-
+  **Enlace al juego:** https://amvc0011.itch.io/roladventure
+  
+  
 ## Descripción
 
 En esta historia podrás elegir qué tipo de rol sigues en tu trayecto, navegarás en busca de desafíos, explorarás los distintos lugares del mundo y te enfrentarás a los enemigos más temidos de la faz de la tierra, todo ello mientras desarrollas a tu personaje. ¿A qué esperas para comenzar tu aventura?
@@ -37,6 +39,18 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 ![5](https://user-images.githubusercontent.com/66868520/113693225-ade7a180-96ce-11eb-953f-466bc55e63a9.jpeg)
 ![6](https://user-images.githubusercontent.com/78795146/113693465-ec7d5c00-96ce-11eb-936c-ccda746b7e07.jpeg)
 
+## (Práctica 4) Explicación de historias de usuario seleccionadas.
+  1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
+  2. El jugador podrá moverse de unas situaciones a otras: Es necesaria para la primera versión del juego.
+  3. El jugador podrá recoger objetos a lo largo del juego: Ha sido seleccionada ya que en esta primera versión será necesario recoger objetos para poder pasarse la historia.
+  4. El jugador podrá usar objetos para resolver puzzles: A la hora de desbloquear algunas situaciones será necesario resolver algún puzzle o prueba en concreto.
+  7. El jugador debe poder saber cuántos puntos lleva en la partida: Implementaremos desde el primer momento un sistema para contabilizar el porcentaje de aventura completado.
+  10. Se añadirá música de fondo al juego: Es un punto bastante fácil y además conseguirá ambientar la experiencia y conseguir una mejor inmersión del jugador.
+  11. Se subirá el juego a un sitio web disponible on-line: De nuevo, es un requisito bastante fácil (en un principio) así que decidimos implementarlo desde el primer momento.
+  16. Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc: Hemos decidido integrar esta historia ya que aporta un apartado visual muy interesante y carece de una dificultad excesiva.
+  18. En al menos una situación (de las existentes o incluyendo alguna/s nueva/s), se podrá establecer un diálogo con otro personaje del juego: Apartado muy interesante y remarcable debido a la complejidad y ambientación de nuestro juego.
+
+
 ## (Práctica 4) Consecuencias del Sprint Review
 
 Se ha hecho todo lo que estaba planeado en un tiempo razonable.
@@ -64,13 +78,20 @@ Creemos que, al menos, todas las tareas innegociables que faltan serán implemen
  - **Conclusión:**
 A pesar de que fuimos bastante optimistas a la hora de elegir historias de usuario, finalmente hemos conseguido llevarlas todas a cabo de forma organizada ajustándonos al plazo previsto.
 
-## (Práctica 4) Explicación de historias de usuario seleccionadas.
-  1. El juego tendrá como mínimo 9 situaciones: Ha sido seleccionada ya que nuestra primera versión del juego necesita como base varias situaciones y este limite será superado en este primer sprint.
-  2. El jugador podrá moverse de unas situaciones a otras: Es necesaria para la primera versión del juego.
-  3. El jugador podrá recoger objetos a lo largo del juego: Ha sido seleccionada ya que en esta primera versión será necesario recoger objetos para poder pasarse la historia.
-  4. El jugador podrá usar objetos para resolver puzzles: A la hora de desbloquear algunas situaciones será necesario resolver algún puzzle o prueba en concreto.
-  7. El jugador debe poder saber cuántos puntos lleva en la partida: Implementaremos desde el primer momento un sistema para contabilizar el porcentaje de aventura completado.
-  10. Se añadirá música de fondo al juego: Es un punto bastante fácil y además conseguirá ambientar la experiencia y conseguir una mejor inmersión del jugador.
-  11. Se subirá el juego a un sitio web disponible on-line: De nuevo, es un requisito bastante fácil (en un principio) así que decidimos implementarlo desde el primer momento.
-  16. Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc: Hemos decidido integrar esta historia ya que aporta un apartado visual muy interesante y carece de una dificultad excesiva.
-  18. En al menos una situación (de las existentes o incluyendo alguna/s nueva/s), se podrá establecer un diálogo con otro personaje del juego: Apartado muy interesante y remarcable debido a la complejidad y ambientación de nuestro juego.
+
+## (Práctica 4) Conclusiones obtenidas en la Sprint Retrospective
+ - **Inspección:**
+ En la realización de este Sprint, el grupo ha tenido una muy buena afinidad y hemos podido realizar mejor el trabajo debido al buen clima que había entre los compañeros.
+ Con respecto las herramientas utilizadas en la realización de la práctica:
+   - Telegram: Mantener comunicación entre compañeros del grupo y para ver la evolución del Sprint gracias a los bots implementados en el grupo.
+   - Visual Studio Code y Atom: Para la modificación de código
+   - Tomato: Para cronometrar las Dailys
+   - Google Meet: Para la reunión del grupo.
+   - Trello: Para la organización del trabajo y la realización correcta de una metodología agil en la evolución del proyecto.
+   - Github: Para compartir los avances entre los compañeros
+   - Itch.io: Para subir el juego a una página web.
+ - **Qué ha ido bien y qué mejorar:**
+Con respecto a las herramientas utilizadas, no hemos tenido nimgún problema en su uso, ya que estabamos familiarizados con todas ellas.
+ - **Adaptación:**
+Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nuestra opinión ha sido muy bueno por lo anteriormente comentado. Sin embargo, nos gustaría tener una asignación de tareas mas clara a la hora de comenzar el Sprint Planning.
+
