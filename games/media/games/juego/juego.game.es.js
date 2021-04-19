@@ -391,26 +391,31 @@ undum.game.situations = {
 		para poder acabar con él.</p></br>\
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el lechazo mágico.\
-		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y la <a href='./pielmurcielago' class='once'>piel del murciélago</a> como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
+		El murciélago cae derrotado y tú, con ese cursillo de primeros auxilios consigues vendar y curar tus heridas.\
+		Finalmente, decides llevarte la cabeza y la piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
 			enter: function (character, system, from){
 				inter.pause();
 				boss.play();
-			},
-			actions: {
-				"cabezamurcielago": function (character, system, action) {
-							system.setQuality("cabezamurcielago", true);
-							system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
-							},
-				"pielmurcielago": function (character, system, action) {
-							system.setQuality("pielmurcielago", true);
-							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
-										tiene una propiedad que te hace inmune al virus de china</p>");
-							}
-				}
-		}
+				system.setQuality("porcentaje", 50);
+				system.setQuality("cabezamurcielago", true);
+				system.setQuality("pielmurcielago", true);
+				system.setCharacterText("<p>Has conseguido la piel inmunológica del murciélago y su cabeza.</p>");
+			}
+	}
 ),
+/*
+actions: {
+	"cabezamurcielago": function (character, system, action) {
+				system.setQuality("cabezamurcielago", true);
+				system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
+				},
+	"pielmurcielago": function (character, system, action) {
+				system.setQuality("pielmurcielago", true);
+				system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
+							tiene una propiedad que te hace inmune al virus de china</p>");
+				}
+	}*/
 
 	primerbossguerrero: new undum.SimpleSituation(
 		"<p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
@@ -421,23 +426,16 @@ undum.game.situations = {
  		<p>Sin embargo, este escurridizo murciélago te consigue esquivar y te golpea fuertemente en la cabeza.\
 		Tu, que estás al borde de desangrarte, consigues con tus últimas fuerzas volver a realizar el barrigazo bacoriano.\
 		El murciélago cae derrotado y tú, con ese cursillo de 1 auxilios consigues vendar y curar tus heridas.\
-		Finalmente, decides llevarte la cabeza y <a href='./pielmurcielago' class='once'>piel del murciélago</a> como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
+		Finalmente, decides llevarte la cabeza y piel del murciélago como trofeo y vas a la <a href='wuhan'>siguiente ciudad</a>.</p></br>",
 		{
 			enter: function (character, system, from){
 				inter.pause();
 				boss.play();
-			},
-			actions: {
-				"cabezamurcielago": function (character, system, action) {
-							system.setQuality("cabezamurcielago", true);
-							system.setCharacterText("<p>Has conseguido la cabeza del Murciélago de la Fruta</p>");
-							},
-				"pielmurcielago": function (character, system, action) {
-							system.setQuality("pielmurcielago", true);
-							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
-										tiene una propiedad que te hace inmune al virus de china</p>");
-							}
-				}
+				system.setQuality("porcentaje", 50);
+				system.setQuality("cabezamurcielago", true);
+				system.setQuality("pielmurcielago", true);
+				system.setCharacterText("<p>Has conseguido la piel inmunológica del murciélago y su cabeza.</p>");
+			}
 		}
 ),
 
@@ -483,8 +481,6 @@ undum.game.situations = {
 		}
 	),
 
-	//Situacion 8 añadida. Faltan algunos href que seran implementados mas tarde.
-
 	segundoboss: new undum.SimpleSituation(
 		"<h1>Cueva del pangolin</h1>\
 	<p>Sin ningun temor, decides entrar al escondite del pangolín gigante y poner fin al \
@@ -497,6 +493,7 @@ undum.game.situations = {
 			enter: function (character, system, from){
 				inter.pause();
 				boss.play();
+				system.setQuality("porcentaje", character.qualities.porcentaje + 50);
 			},
 			actions: {
 				"ataque": function (character, system, action) {
@@ -560,6 +557,10 @@ undum.game.qualities = {
 		"Piel Murciélago", { priority: "0006", group: 'inventario', onDisplay: "&#10003;" }
 	),
 
+	cabezamurcielago: new undum.OnOffQuality(
+		"Cabeza Murciélago", { priority: "0004", group: 'trofeos', onDisplay: "&#10003;" }
+	),
+
 	baston: new undum.OnOffQuality(
 		"Baston", { priority: "0002", group: 'inventario', onDisplay: "&#10003;" }
 	),
@@ -577,11 +578,15 @@ undum.game.qualities = {
 	),
 
 	pangolin: new undum.OnOffQuality(
-		"Pangolin", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
+		"Pangolin", { priority: "0004", group: 'trofeos', onDisplay: "&#10003;" }
 	),
 
 	pangolines: new undum.NonZeroIntegerQuality(
 		"Pangolines KO", { priority: "0004", group: 'inventario', onDisplay: "&#10003;" }
+	),
+
+	porcentaje: new undum.IntegerQuality(
+		"Progreso: ", { priority: "0001", group: 'trofeos', onDisplay: "&#10003;" }
 	)
 
 };
@@ -593,7 +598,8 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-	inventario: new undum.QualityGroup('Inventario', { priority: "0001" })
+	inventario: new undum.QualityGroup('Inventario', { priority: "0001" }),
+	trofeos: new undum.QualityGroup('Trofeos', { priority: "0002" })
 };
 
 // ---------------------------------------------------------------------------
@@ -607,5 +613,6 @@ undum.game.init = function (character, system) {
 	system.setQuality("antorcha", false)
 	system.setQuality("llave", false)
 	system.setQuality("pangolines", 0)
+	system.setQuality("porcentaje", 0)
 	system.setCharacterText("<p>Comienzas tu fascinante aventura!</p>");
 };
