@@ -95,3 +95,12 @@ Con respecto a las herramientas utilizadas, no hemos tenido nimgún problema en 
  - **Adaptación:**
 Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nuestra opinión ha sido muy bueno por lo anteriormente comentado. Sin embargo, nos gustaría tener una asignación de tareas mas clara a la hora de comenzar el Sprint Planning.
 
+## (Práctica 4) Capturas de pantalla del Product Backlog.
+![1](https://user-images.githubusercontent.com/66868520/115224201-de86fc80-a10c-11eb-9ace-8ea86b2646e0.jpeg)
+![2](https://user-images.githubusercontent.com/66868520/115224255-f0689f80-a10c-11eb-91d9-45771c117cc8.jpeg)
+![3](https://user-images.githubusercontent.com/66868520/115224121-cb742c80-a10c-11eb-910c-c280d1465d11.jpeg)
+
+
+
+## (Práctica 4) Captura de pantalla global
+![1](https://user-images.githubusercontent.com/66868520/115224700-7b499a00-a10d-11eb-891e-c86bb395d4db.jpeg)
