@@ -38,7 +38,7 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions: {
-				
+
 				"baston": function (character, system, action) {
 					system.setQuality("baston", true);
 					system.setCharacterText("<p>Se te ha sido otorgado el baston mágico del poderoso Gandalf</p>");
@@ -54,18 +54,18 @@ undum.game.situations = {
 		}
 	),
 
-	
+
 
 	selectorciudad: new undum.SimpleSituation(
 		"<h1>Tienes que tomar una decisión.</h1>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
 		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a></h1></p>",
 		{
-			
+
 				enter: function (character, system, from) {
 					ini.play();
 				}
-			
+
 		}
 	),
 
@@ -88,7 +88,7 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions: {
-				
+
 				"diag1": function (character, system, action) {
 
 					system.setCharacterText("<p>Los murciélagos se sitúan en zonas cálidas y regiones con alta afluencia de árboles frutales. Al sur de esta aldea podrás encontrar esta zona. </p>");
@@ -116,13 +116,13 @@ undum.game.situations = {
 		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto. \
 		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>",
 		{
-		
+
 			enter: function (character, system, from){
 				boss.pause();
 				ini.play();
 			},
 			actions:{
-				
+
 			}
 		}
 	),
@@ -141,7 +141,7 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions:{
-				
+
 			}
 		}
 	),
@@ -163,7 +163,7 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions:{
-				
+
 			}
 		}
 
@@ -178,8 +178,8 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions:{
-				
-				
+
+
 			}
 		}
 	),
@@ -195,7 +195,7 @@ undum.game.situations = {
 				ini.play();
 			},
 			actions: {
-				
+
 				"diag1h": function (character, system, action) {
 					system.setCharacterText("<p>...</p>");
 				},
@@ -228,7 +228,7 @@ undum.game.situations = {
 						system.doLink("africa");
 					}
 			},
-				
+
 			}
 		}
 	),
@@ -279,7 +279,7 @@ undum.game.situations = {
 	  <li> <a href='./caminoes' class='once'>Camino estrecho</a> </li> \
 	  <li> <a href='./caminoos' class='once'>Camino oscuro</a></li></ul></p>",
 		{
-			
+
 			actions: {
 				"caminonor": function (character, system, action) {
 					if (character.qualities.llave) {
@@ -320,7 +320,7 @@ undum.game.situations = {
 	),
 	caminonorllave: new undum.SimpleSituation(
 	"<p></p>",
-		
+
 		{
 			enter: function(character, system, from){
 				if(character.qualities.baston){
@@ -408,7 +408,7 @@ undum.game.situations = {
 							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
 										tiene una propiedad que te hace inmune al virus de china</p>");
 							}
-				}	
+				}
 		}
 ),
 
@@ -437,10 +437,10 @@ undum.game.situations = {
 							system.setCharacterText("<p>Has conseguido la piel del Murciélago de la Fruta que\
 										tiene una propiedad que te hace inmune al virus de china</p>");
 							}
-				}	
+				}
 		}
 ),
-	
+
 
 
 	templocielo: new undum.SimpleSituation(
@@ -455,7 +455,7 @@ undum.game.situations = {
 	<li><a href='segundoboss'>Enfrentar al Pangolín Gigante</a></li></ul></p>",
 	{
 			enter: function (character, system, from){
-				ini.pause(); 
+				ini.pause();
 				inter.play();
 			}
 			}
@@ -467,7 +467,10 @@ undum.game.situations = {
 	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
 	<li><a href='./ir-boss''>Enfrentar al Pangolín Gigante</a></li></ul></p>",
 		{
-
+			enter: function (character, system, from){
+				boss.pause();
+				inter.play();
+			},
 			actions: {
 				"pangolin-muerto": function (character, system, action) {
 					system.setQuality("pangolines", character.qualities.pangolines + 1);
@@ -491,6 +494,10 @@ undum.game.situations = {
 	<p>Decides <a href='./ataque'>realizar un ataque</a> o por el contrario <a>volver atrás</a>\
 	ya que no estas tan seguro de poder eliminar a este duro rival.</p>",
 		{
+			enter: function (character, system, from){
+				inter.pause();
+				boss.play();
+			},
 			actions: {
 				"ataque": function (character, system, action) {
 					if (character.qualities.pangolines > 11) {
@@ -522,12 +529,12 @@ undum.game.situations = {
 
 	),
 
-	
+
 	bossvive: new undum.SimpleSituation(
 		"<h1>Cueva del pangolin</h1>\
 		<p>Intentas atacar justo en el corazon, pero este se enrolla, parando tu ataque y realizando un contraataque que te manda fuera\
 	de la sala. Parece ser que no eres lo suficientemente fuerte para matarlo, por lo que debes de \
-	<a href='pangolin'>seguir entrenando</a> con los pequeños pangolines.</p>", 
+	<a href='pangolin'>seguir entrenando</a> con los pequeños pangolines.</p>",
 	),
 
 	fin: new undum.SimpleSituation(
@@ -536,7 +543,7 @@ undum.game.situations = {
 	Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>",
 	)
 
-	
+
 };
 
 
