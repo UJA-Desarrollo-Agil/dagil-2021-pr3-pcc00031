@@ -102,7 +102,6 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 ![3](https://user-images.githubusercontent.com/66868520/115224121-cb742c80-a10c-11eb-910c-c280d1465d11.jpeg)
 
 
-
 ## (Práctica 4) Captura de pantalla global
 ![1](https://user-images.githubusercontent.com/66868520/115224700-7b499a00-a10d-11eb-891e-c86bb395d4db.jpeg)
 
@@ -114,4 +113,15 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 ## (Práctica 5) Capturas de pantalla del Sprint Backlog después del Sprint Planning
 ![1](https://user-images.githubusercontent.com/49394226/115369656-9f1de600-a1c8-11eb-8bb7-7861fe8ee8cd.jpeg)
 ![2](https://user-images.githubusercontent.com/49394226/115369794-bfe63b80-a1c8-11eb-86c9-d32305d65475.jpeg)
+
+## (Práctica 5) Capturas de pantalla de las HU divididas en Tasks (ya asignadas)
+![1](https://user-images.githubusercontent.com/78792818/115372897-a5619180-a1cb-11eb-9375-e12251a9f505.png)
+![2](https://user-images.githubusercontent.com/78792818/115372923-ab577280-a1cb-11eb-90b8-01a4454b82fd.png)
+
+## (Práctica 5) Explicación de historias de usuario seleccionadas.
+  1. "Si una nueva versión del juego incluye nuevas situaciones, estas deben o bien complicar la misión inicial o bien añadir una nueva misión al juego." Añadiremos una nueva misión.
+  2. "El jugador podrá usar la acción “mirar detalladamente” (u otra similar) para poder descubrir nuevas cosas en las situaciones que no se le hayan descrito a primera vista." Aporta dinamismo al juego y lo hace más interesante. Además, consideramos que tiene un valor bastante alto.
+  3. "Se añadirán videos (o enlaces a vídeos) en los que se incluya parte de la historia que necesita para completar el juego y tomar decisiones." Al igual que la anterior, aporta una mayor inmersión en la aventura.
+  4. "Se podrá personalizar el juego preguntando el nombre del jugador/jugadora y modificando los textos para que le citen y pregunten personalmente por su nombre." Para conseguir hacer el juego más personal, es decir, más cercano al jugador.
+  5. "Cada situación deberá llevar una imagen descriptiva asociada." No supone una gran dificultad y también ayuda bastante a hacer el juego más atractivo visualmente.
 
