@@ -62,6 +62,7 @@ El reparto de tareas se ha realizado de manera efectiva tal y como estaba organi
 Hemos estado al tanto diariamente haciendo el Daily Scrum.
 
  - **Problemas encontrados:**
+
 Dificultades en la puesta en común de un horario para hacer el Daily Scrum.
 Crear la idea principal del juego, ya que fue lo que más tardamos en decidir entre todos.
 
@@ -104,3 +105,13 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 
 ## (Práctica 4) Captura de pantalla global
 ![1](https://user-images.githubusercontent.com/66868520/115224700-7b499a00-a10d-11eb-891e-c86bb395d4db.jpeg)
+
+## (Práctica 5) Capturas de pantalla del Product Backlog antes del Sprint Planning
+![1](https://user-images.githubusercontent.com/66868520/115224201-de86fc80-a10c-11eb-9ace-8ea86b2646e0.jpeg)
+![2](https://user-images.githubusercontent.com/66868520/115224255-f0689f80-a10c-11eb-91d9-45771c117cc8.jpeg)
+![3](https://user-images.githubusercontent.com/66868520/115224121-cb742c80-a10c-11eb-910c-c280d1465d11.jpeg)
+
+## (Práctica 5) Capturas de pantalla del Sprint Backlog después del Sprint Planning
+![1](https://user-images.githubusercontent.com/49394226/115369656-9f1de600-a1c8-11eb-8bb7-7861fe8ee8cd.jpeg)
+![2](https://user-images.githubusercontent.com/49394226/115369794-bfe63b80-a1c8-11eb-86c9-d32305d65475.jpeg)
+
