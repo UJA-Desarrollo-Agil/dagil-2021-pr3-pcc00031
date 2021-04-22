@@ -24,12 +24,12 @@ body {
 }
 #title {
     max-width: 28em;
-    background: #e6e6c6 url("../img/title_bg.jpg") repeat -1.1em -1.1em;
+    background:url("../img/title_bg.jpg") repeat -1.1em -1.1em;
     margin: 2.2em auto 1.1em auto;
     padding: 1.7em;
-    border: 1.1em solid rgba(0,0,0,0.25);
+    border: 0.5em solid rgba(0,0,0,0.15);
     cursor: pointer; /* Until we click to start. */
-    color:white;
+    color: white;
 }
 #title .label {
     overflow: hidden;
@@ -108,7 +108,7 @@ background-size: 100%;
     display: none; /* Shown by Javascript */
     overflow: auto;
     background-size: 100%;
-    opacity: 0.6;
+    opacity: 0.9;
     border-radius: 6px;
 }
 span.drop + p {

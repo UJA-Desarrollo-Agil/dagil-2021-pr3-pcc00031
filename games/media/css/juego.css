@@ -1,7 +1,3 @@
-#title {
-    background: #e6e6c6 url("../img/titulo.jpg") no-repeat ;
-		border-width: 0px;
-}
 
 .dialogo {
 	font-style: italic;
@@ -35,4 +31,52 @@ color:white;
 
 h1 {
 color:white;
+}
+
+#vid1 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#vid2 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#vid3 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#vid4 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#vid5 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#vid6 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
