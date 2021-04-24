@@ -654,7 +654,7 @@ undum.game.situations = {
         Seguramente no te hayan atacado porque actualmente es la hora de su siesta.</p> \
         <p> Ante estas palabras de la chica misteriosa decides: \
         <a href='historiagirl'>preguntar qué pasó con las demás personas</a> o \
-        <a href='playa2'>enfrentar a la plaga</a> </p>",
+        <a href='playa2'>ir a combatir a la plaga</a> </p>",
     ),
 
     historiagirl: new undum.SimpleSituation(
@@ -666,7 +666,7 @@ undum.game.situations = {
         sin embargo, ese día el mosquito del dengue gigante salió de las profundidades del mar y acabó con toda mi familia, \
         sólo yo pude sobrevivir.</p>\
         <p> Tras escuchar esta historia decides que acabarás con la plaga de esta isla y obviamente con el Mosquito del Dengue,\
-        abandonas la cabaña y te <a href='playa2'>diriges a la playa</a>.</p>",
+        abandonas la cabaña y te <a href='playa2'>decides a enfretarte a la plaga</a>.</p>",
     ),
 
     historiadengue: new undum.SimpleSituation(
@@ -683,35 +683,119 @@ undum.game.situations = {
         <p>Todos ellos se conocen como: 'Los mosquitos del Dengue'</p></br></br>\
         <p><i>Escrito por: Boy (Esposo de Girl)</i></p></br></br>\
         <p>PD: No sé cuanto tiempo aguantaré en esta isla...</p></br>\
-        <p><a href='playa'>Volver a la playa</a></p>",
+        <p><a href='playa'>Continuar</a></p>"
     ),
 
-    playa2: new undum.SimpleSituation(
-        "<h1> Enfrentamiento plaga </h1>\
-	<p>Por implementar</p>",
+    playa2: new undum.SimpleSituation(//insertar imagen de un templo con mar de fondo o algo así
+        "<h1>Profundidades de la Isla de Java</h1>\
+        <p>Te diriges hacia el otro extremo de la isla y consigues ver un templo enorme que ha sido devorado por la vegetación.</p>\
+        <p><a href='./explorartemplo'>Decides entrar a explorar</a></p>. ",
+        {
+
+            actions: {
+
+                "explorartemplo": function (character, system, action) {
+                    if (character.qualities.talisman == false) {
+                        system.doLink("sintalisman");
+                    } else {
+                        system.doLink("contalisman");
+                    }
+                }
+              }
+            }
+    ),
+
+    sintalisman: new undum.SimpleSituation(
+        "<h1>Templo de Java</h1>\
+        <p>A simple vista parece un lugar abandonado desde hace mucho tiempo y prácticamente en ruinas.</p>\
+        <p>A pesar de esto, está muy iluminada y no tiene muchos detalles interesantes de los que poder obtener ayuda.\
+        Sin embargo, hay una sala al fondo la cual está totalmente oscura y vacía, pero un pequeño halo de luz, que sale de \
+        una pequeña brecha en el techo, alumbra hacia una pared en la cual hay un orificio con una forma extraña que te es familiar. \
+        Haciendo memoria recuerdas que la chica te dijo que la plaga comenzó con un talismán, quizá si lo encuentras podría encajar. </p>\
+        <p>Debes <a href='buscatalisman'>volver cuanto antes a la playa</a> a buscarlo. </p>."
+
+    ),
+
+    contalisman: new undum.SimpleSituation(
+        "<h1>Templo de Java</h1>\
+        <p>A simple vista parece un lugar abandonado desde hace mucho tiempo y prácticamente en ruinas.</p>\
+        <p>A pesar de esto, está muy iluminada y no tiene muchos detalles interesantes de los que poder obtener ayuda.\
+        Sin embargo, hay una sala al fondo la cual está totalmente oscura y vacía, pero un pequeño halo de luz, que sale de \
+        una pequeña brecha en el techo, alumbra hacia una pared en la cual hay un orificio con una forma extraña que te es familiar. \
+        Haciendo memoria recuerdas que tiene la misma forma que el talismán que encontraste en la playa.</p>\
+        <p>No dudas ni un momento en <a href='comienzaboss'>comprobar si encaja</a>.</p>."
+
+    ),
+
+    buscatalisman: new undum.SimpleSituation(
+        "<h1> Playa de la Isla de Java </h1>\
+        <!--<img class='img-situation' src='./media/img/arena.jpg'>-->\
+        <p>No recuerdas exactamente donde fue, así que haces una búsqueda que dura horas y parece interminable... \
+        ¡Ahí está! Consigues verlo y cuando te dispones a cogerlo te das cuenta de que es una piedra. \
+        Sin embargo, a lo lejos ves una <a class='once' href='./pala'>pala</a></p>",
+        {
+
+            actions: {
+              "pala": function (character, system, action) {
+                  if (character.qualities.pala == false) {
+                      system.setQuality("pala", true);
+                      system.setCharacterText("<p>Has obtenido una pala de juguete</p>");
+                      //Mirar detalladamente --> Descomentar estas lineas para la tarea "mirar detalladamente" + borrar esta linea
+                      //system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
+                      //<p>Te dispones a <a href='./agujero' class='once'>cavar un agujero</a>.;
+                  } else {
+                      system.setCharacterText("<p>Ya la has recogido antes</p>");
+                  }
+              },
+              "agujero": function (character, system, action) {
+                  system.write("</br><p>Al cavar un agujero encuentras el ansiado <a href='./talisman' class='once'>talisman</a>.</p>\
+                     <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>"
+                   );
+              },
+                "talisman": function (character, system, action) {
+                    system.setQuality("talisman", true);
+                    system.setCharacterText("<p>Has obtenido un talismán</p>\
+                    <p>Debes <a href='start'>volver al templo</a>.</p>");
+                }
+            }
+        }
+    ),
+
+    introducetalisman: new undum.SimpleSituation(
+        "<h1>Templo de Java</h1>\
+        <p>Te apresuras a la sala oscura de la otra vez y \
+        no dudas ni un momento en <a href='comienzaboss'>comprobar si encaja</a>.</p>."
+
+    ),
+
+    comienzaboss: new undum.SimpleSituation(
+        "<h1> Mosquito del Dengue </h1>\
+        <p>En cuanto pones el talismán empiezan a escucharse ruidos extraños y la puerta de la sala en la que has entrado se cierra y \
+        la pequeña brecha que había en el techo comienza a abrirse. Corres a esconderte detrás de unos escombros cuando ves algo aterrador\
+        entrar desde el techo...\
+        <p><a href='bossmosquito'>Continuar</a></p>.", {
+              enter: function (character, system, from) {
+                  boss.play();
+                  inter.pause();
+                  vid1.style.display = 'none';
+                  vid2.style.display = 'none';
+                  vid3.style.display = 'none';
+                  vid4.style.display = 'none';
+                  vid5.style.display = 'none';
+                  vid6.style.display = 'none'; // block
+              }
+          }
     ),
 
     bossmosquito: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
-	<p>Por implementar</p>", {
-        enter: function (character, system, from) {
-            boss.play();
-            inter.pause();
-            vid1.style.display = 'none';
-            vid2.style.display = 'none';
-            vid3.style.display = 'none';
-            vid4.style.display = 'none';
-            vid5.style.display = 'none';
-            vid6.style.display = 'none'; // block
-
-        }
-    }
+	       <p>Por implementar</p>"
     ),
 
     fin: new undum.SimpleSituation(
         "<h1> FIN </h1>\
-	<p>¡Enhorabuena! Has conseguido salvar a la humanidad de los distintos peligros que la acechaban.\
-	Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>\
+	       <p>¡Enhorabuena! Has conseguido salvar a la humanidad de los distintos peligros que la acechaban.\
+	        Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>\
         <!--<img class= 'img-situation' src = './media/img/heroe.jpg'>-->",
         {
             enter: function (character, system, from) {
