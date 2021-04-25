@@ -746,7 +746,7 @@ undum.game.situations = {
                   }
               },
               "agujero": function (character, system, action) {
-                  system.write("</br><p>Al cavar un agujero encuentras el ansiado <a href='./talisman' class='once'>talisman</a>.</p>\
+                  system.write("</br><p>Al cavar un agujero encuentras el ansiado <a href='./talisman' class='once'>talisman</a></p>\
                      <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>"
                    );
               },
