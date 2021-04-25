@@ -405,7 +405,7 @@ undum.game.situations = {
 
     primerbossmago: new undum.SimpleSituation(
         "<h1>Murciélago de la fruta</h1>\
-        <!--<img class='img-situation' src='./media/img/murcielago.jpg'>-->\
+        <img class='img-situation' src='./media/img/murcielago.jpg'>\
         <p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
 		peligroso si no piensas una estrategia y cómo defenderte antes.\
 		Vaya, eres el primer mago que solo ha practicado un tipo de ataque, pero es tan letal\
@@ -429,7 +429,7 @@ undum.game.situations = {
 
     primerbossguerrero: new undum.SimpleSituation(
         "<h1>Murciélago de la fruta</h1>\
-        <!--<img class='img-situation' src='./media/img/murcielago.jpg'>-->\
+        <img class='img-situation' src='./media/img/murcielago.jpg'>\
         <p>Estás ante el murciélago de la Fruta, ten cuidado con él ya que es muy rápido y será\
         peligroso si no piensas una estrategia y cómo defenderte antes.\
         Vaya, eres el primer guerrero que solo ha practicado un tipo de ataque, pero es tan letal\
@@ -500,7 +500,7 @@ undum.game.situations = {
 
     segundoboss: new undum.SimpleSituation(
         "<h1>Pangolín Gigante</h1>\
-        <!--<img class='img-situation' src='./media/img/pangolin.jpg'>-->\
+        <img class='img-situation' src='./media/img/pangolin.jpg'>\
 	<p>Sin ningun temor, decides entrar al escondite del pangolín gigante y poner fin al \
 	oscuro futuro que le espera a la humanidad</p>\
 	<p>El pangolin, nada mas verte, realiza un grito que asustaría hasta al mismisimo Chuck Norris, pero \
@@ -583,9 +583,8 @@ undum.game.situations = {
                     if (character.qualities.pala == false) {
                         system.setQuality("pala", true);
                         system.setCharacterText("<p>Has obtenido una pala de juguete</p>");
-                        //Mirar detalladamente --> Descomentar estas lineas para la tarea "mirar detalladamente" + borrar esta linea
-                        //system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
-                        //<p>Puedes: <a href='./agujero' class='once'>cavar un agujero</a> o bien, <a href='play'>seguir explorando la playa.</a></p>");
+                        system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
+                        <p>Puedes: <a href='./agujero' class='once'>cavar un agujero</a> o bien, <a href='play'>seguir explorando la playa.</a></p>");
                     } else {
                         system.setCharacterText("<p>Ya la has recogido antes</p>");
                     }
@@ -594,7 +593,7 @@ undum.game.situations = {
                     system.write("</br><p>Al cavar un agujero te percatas de que hay enterrado un <a href='./talisman' class='once'>talisman</a>,\
                                 puede que te sea útil en un futuro.</br></br>\
                        <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>\
-                                <h1><a href='start'>Continuar explorando</a> o <a href='play'>volver a la playa</a></p>");
+                                <h1><a href='islajavaprof'>Continuar explorando</a> o <a href='play'>volver a la playa</a></p>");
                 },
                 "talisman": function (character, system, action) {
                     system.setQuality("talisman", true);
@@ -740,9 +739,8 @@ undum.game.situations = {
                   if (character.qualities.pala == false) {
                       system.setQuality("pala", true);
                       system.setCharacterText("<p>Has obtenido una pala de juguete</p>");
-                      //Mirar detalladamente --> Descomentar estas lineas para la tarea "mirar detalladamente" + borrar esta linea
-                      //system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
-                      //<p>Te dispones a <a href='./agujero' class='once'>cavar un agujero</a>.;
+                      system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
+                      <p>Te dispones a <a href='./agujero' class='once'>cavar un agujero</a>.</p>");
                   } else {
                       system.setCharacterText("<p>Ya la has recogido antes</p>");
                   }
@@ -754,8 +752,8 @@ undum.game.situations = {
               },
                 "talisman": function (character, system, action) {
                     system.setQuality("talisman", true);
-                    system.setCharacterText("<p>Has obtenido un talismán</p>\
-                    <p>Debes <a href='start'>volver al templo</a>.</p>");
+                    system.setCharacterText("<p>Has obtenido un talismán</p>");
+                    system.write("<p>Debes <a href='introducetalisman'>volver al templo</a>.</p>");
                 }
             }
         }
@@ -789,6 +787,7 @@ undum.game.situations = {
 
     bossmosquito: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
+        <img class='img-situation' src='./media/img/mosquito.jpg'>\
 	       <p>Por implementar</p>"
     ),
 
