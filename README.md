@@ -129,7 +129,9 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 
 ![1](https://user-images.githubusercontent.com/66868520/116217600-182db800-a74a-11eb-8b6a-608c9a4efe54.jpeg)
 ![2](https://user-images.githubusercontent.com/66868520/116217686-28de2e00-a74a-11eb-8321-765e6a7c8e39.jpeg)
+![3](https://user-images.githubusercontent.com/78795146/116218251-a2761c00-a74a-11eb-825e-35acc707ba5e.jpeg)
 
+No hemos añadido ninguna historia de usuario al Sprint Backlog. Se mantiene igual a como lo teníamos antes del PBR.
 
 
 
