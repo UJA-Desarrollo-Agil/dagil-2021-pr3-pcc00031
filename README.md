@@ -125,3 +125,22 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
   4. "Se podrá personalizar el juego preguntando el nombre del jugador/jugadora y modificando los textos para que le citen y pregunten personalmente por su nombre." Para conseguir hacer el juego más personal, es decir, más cercano al jugador.
   5. "Cada situación deberá llevar una imagen descriptiva asociada." No supone una gran dificultad y también ayuda bastante a hacer el juego más atractivo visualmente.
 
+## (Práctica 5) Consecuencia del Product Backlog Refinement(PBR)
+
+![1](https://user-images.githubusercontent.com/66868520/116217600-182db800-a74a-11eb-8b6a-608c9a4efe54.jpeg)
+![2](https://user-images.githubusercontent.com/66868520/116217686-28de2e00-a74a-11eb-8321-765e6a7c8e39.jpeg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
