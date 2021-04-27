@@ -593,7 +593,7 @@ undum.game.situations = {
                     system.write("</br><p>Al cavar un agujero te percatas de que hay enterrado un <a href='./talisman' class='once'>talisman</a>,\
                                 puede que te sea útil en un futuro.</br></br>\
                        <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>\
-                                <h1><a href='islajavaprof'>Continuar explorando</a> o <a href='play'>volver a la playa</a></p>");
+                                <h1><a href='islajavaprof'>Continuar</a> o <a href='play'>volver a la playa</a></p>");
                 },
                 "talisman": function (character, system, action) {
                     system.setQuality("talisman", true);
@@ -653,7 +653,20 @@ undum.game.situations = {
         Seguramente no te hayan atacado porque actualmente es la hora de su siesta.</p> \
         <p> Ante estas palabras de la chica misteriosa decides: \
         <a href='historiagirl'>preguntar qué pasó con las demás personas</a> o \
-        <a href='playa2'>ir a combatir a la plaga</a> </p>",
+        <a href='./combatirplaga'>ir a combatir a la plaga</a>. </p>",
+        {
+
+            actions: {
+
+                "combatirplaga": function (character, system, action) {
+                    if (character.qualities.talisman == false) {
+                        system.doLink("sintalisman");
+                    } else {
+                        system.doLink("contalisman");
+                    }
+                }
+              }
+            }
     ),
 
     historiagirl: new undum.SimpleSituation(
@@ -665,7 +678,20 @@ undum.game.situations = {
         sin embargo, ese día el mosquito del dengue gigante salió de las profundidades del mar y acabó con toda mi familia, \
         sólo yo pude sobrevivir.</p>\
         <p> Tras escuchar esta historia decides que acabarás con la plaga de esta isla y obviamente con el Mosquito del Dengue,\
-        abandonas la cabaña y te <a href='playa2'>decides a enfretarte a la plaga</a>.</p>",
+        abandonas la cabaña y te <a href='./combatirplaga'>decides a enfretarte a la plaga</a>.</p>",
+        {
+
+            actions: {
+
+                "combatirplaga": function (character, system, action) {
+                    if (character.qualities.talisman == false) {
+                        system.doLink("sintalisman");
+                    } else {
+                        system.doLink("contalisman");
+                    }
+                }
+              }
+            }
     ),
 
     historiadengue: new undum.SimpleSituation(
@@ -685,110 +711,77 @@ undum.game.situations = {
         <p><a href='playa'>Continuar</a></p>"
     ),
 
-    playa2: new undum.SimpleSituation(//insertar imagen de un templo con mar de fondo o algo así
-        "<h1>Profundidades de la Isla de Java</h1>\
-        <p>Te diriges hacia el otro extremo de la isla y consigues ver un templo enorme que ha sido devorado por la vegetación.</p>\
-        <p><a href='./explorartemplo'>Decides entrar a explorar</a></p>. ",
-        {
-
-            actions: {
-
-                "explorartemplo": function (character, system, action) {
-                    if (character.qualities.talisman == false) {
-                        system.doLink("sintalisman");
-                    } else {
-                        system.doLink("contalisman");
-                    }
-                }
-              }
-            }
-    ),
-
     sintalisman: new undum.SimpleSituation(
-        "<h1>Templo de Java</h1>\
-        <p>A simple vista parece un lugar abandonado desde hace mucho tiempo y prácticamente en ruinas.</p>\
-        <p>A pesar de esto, está muy iluminada y no tiene muchos detalles interesantes de los que poder obtener ayuda.\
-        Sin embargo, hay una sala al fondo la cual está totalmente oscura y vacía, pero un pequeño halo de luz, que sale de \
-        una pequeña brecha en el techo, alumbra hacia una pared en la cual hay un orificio con una forma extraña que te es familiar. \
-        Haciendo memoria recuerdas que la chica te dijo que la plaga comenzó con un talismán, quizá si lo encuentras podría encajar. </p>\
-        <p>Debes <a href='buscatalisman'>volver cuanto antes a la playa</a> a buscarlo. </p>."
+        "<h1> HAS MUERTO </h1>\
+        <p>Mientras caminas por la playa, observas a lo lejos una gran nube negra que parece ser la plaga. \
+        Te gusta ser el héroe siempre y decides lanzarte a derrotarla. </p>\
+        <p>Por desgracia, la gran cantidad de mosquitos finalmente acaba contigo y no has sido capaz de terminar tu aventura. </p>."
 
     ),
 
     contalisman: new undum.SimpleSituation(
-        "<h1>Templo de Java</h1>\
-        <p>A simple vista parece un lugar abandonado desde hace mucho tiempo y prácticamente en ruinas.</p>\
-        <p>A pesar de esto, está muy iluminada y no tiene muchos detalles interesantes de los que poder obtener ayuda.\
-        Sin embargo, hay una sala al fondo la cual está totalmente oscura y vacía, pero un pequeño halo de luz, que sale de \
-        una pequeña brecha en el techo, alumbra hacia una pared en la cual hay un orificio con una forma extraña que te es familiar. \
-        Haciendo memoria recuerdas que tiene la misma forma que el talismán que encontraste en la playa.</p>\
-        <p>No dudas ni un momento en <a href='comienzaboss'>comprobar si encaja</a>.</p>."
+        "<h1>lucha contra la plaga</h1>\
+        <p>Mientras caminas por la playa, observas a lo lejos una gran nube negra que parece ser la plaga. \
+        Te gusta ser el héroe siempre y decides lanzarte a derrotarla. </p>\
+        <p>Cuando te acercas a ella, los mosquitos se abren paso y no te atacan. Parece que el efecto del talismán que llevas encima\
+        hace que no se puedan acercar a tí. </p>\
+        <p>Para terminar tu aventura no es primordial acabar con los mosquitos, así que decides <a href='./tienetraje'>continuar tu camino</a></p>",
 
-    ),
-
-    buscatalisman: new undum.SimpleSituation(
-        "<h1> Playa de la Isla de Java </h1>\
-        <!--<img class='img-situation' src='./media/img/arena.jpg'>-->\
-        <p>No recuerdas exactamente donde fue, así que haces una búsqueda que dura horas y parece interminable... \
-        ¡Ahí está! Consigues verlo y cuando te dispones a cogerlo te das cuenta de que es una piedra. \
-        Sin embargo, a lo lejos ves una <a class='once' href='./pala'>pala</a></p>",
         {
 
             actions: {
-              "pala": function (character, system, action) {
-                  if (character.qualities.pala == false) {
-                      system.setQuality("pala", true);
-                      system.setCharacterText("<p>Has obtenido una pala de juguete</p>");
-                      system.write("<h1>Al coger la pala te percatas de que hay una especie de marca</h1>\
-                      <p>Te dispones a <a href='./agujero' class='once'>cavar un agujero</a>.</p>");
-                  } else {
-                      system.setCharacterText("<p>Ya la has recogido antes</p>");
-                  }
-              },
-              "agujero": function (character, system, action) {
-                  system.write("</br><p>Al cavar un agujero encuentras el ansiado <a href='./talisman' class='once'>talisman</a></p>\
-                     <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>"
-                   );
-              },
-                "talisman": function (character, system, action) {
-                    system.setQuality("talisman", true);
-                    system.setCharacterText("<p>Has obtenido un talismán</p>");
-                    system.write("<p>Debes <a href='introducetalisman'>volver al templo</a>.</p>");
+
+                "tienetraje": function (character, system, action) {
+                    if (character.qualities.traje == false) {
+                        system.doLink("previoboss3");
+                    } else {
+                        system.doLink("bossmosquito");
+                    }
+                }
+              }
+            }
+
+    ),
+
+    previoboss3: new undum.SimpleSituation(
+        "<h1>buscar traje</h1>\
+        <p>Encuentras unas ruinas inundadas, lo que indica que tu aventura continuará en las profundidades del mar. Es por ello que necesitas un traje de buceo.</p>\
+        <p>Debes <a class='once' href='buscatraje'>buscar uno en la playa</a></p>"
+
+    ),
+
+    buscatraje: new undum.SimpleSituation(
+        "<h1> Playa de la Isla de Java </h1>\
+        <p>No recuerdas exactamente donde fue, así que haces una búsqueda que dura horas y parece interminable... \
+        ¡Ahí está! Has encontrado el <a class='once' href='./encuentratraje'>traje de buceo</a></p>",
+        {
+
+            actions: {
+                "encuentratraje": function (character, system, action) {
+                    system.setQuality("traje", true);
+                    system.setCharacterText("<p>Has obtenido un traje de buceo</p>");
+                    system.write("<p>Debes <a href='bossmosquito'>continuar</a>.</p>");
                 }
             }
         }
     ),
 
-    introducetalisman: new undum.SimpleSituation(
-        "<h1>Templo de Java</h1>\
-        <p>Te apresuras a la sala oscura de la otra vez y \
-        no dudas ni un momento en <a href='comienzaboss'>comprobar si encaja</a>.</p>."
-
-    ),
-
-    comienzaboss: new undum.SimpleSituation(
-        "<h1> Mosquito del Dengue </h1>\
-        <p>En cuanto pones el talismán empiezan a escucharse ruidos extraños y la puerta de la sala en la que has entrado se cierra y \
-        la pequeña brecha que había en el techo comienza a abrirse. Corres a esconderte detrás de unos escombros cuando ves algo aterrador\
-        entrar desde el techo...\
-        <p><a href='bossmosquito'>Continuar</a></p>.", {
-              enter: function (character, system, from) {
-                  boss.play();
-                  inter.pause();
-                  vid1.style.display = 'none';
-                  vid2.style.display = 'none';
-                  vid3.style.display = 'none';
-                  vid4.style.display = 'none';
-                  vid5.style.display = 'none';
-                  vid6.style.display = 'none'; // block
-              }
-          }
-    ),
-
     bossmosquito: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
         <img class='img-situation' src='./media/img/mosquito.jpg'>\
-	       <p>Por implementar</p>"
+	       <p>Por implementar</p>",
+         {
+               enter: function (character, system, from) {
+                   boss.play();
+                   inter.pause();
+                   vid1.style.display = 'none';
+                   vid2.style.display = 'none';
+                   vid3.style.display = 'none';
+                   vid4.style.display = 'none';
+                   vid5.style.display = 'none';
+                   vid6.style.display = 'none'; // block
+               }
+           }
     ),
 
     fin: new undum.SimpleSituation(
@@ -867,8 +860,8 @@ undum.game.qualities = {
         "Libro del Dengue", { priority: "0010", group: 'inventario', onDisplay: "&#10003;" }
     ),
 
-    trajebuceo: new undum.OnOffQuality(
-        "Taje de buceo", { priority: "0011", group: 'inventario', onDisplay: "&#10003;" }
+    traje: new undum.OnOffQuality(
+        "Traje de buceo", { priority: "0011", group: 'inventario', onDisplay: "&#10003;" }
     ),
     talisman: new undum.OnOffQuality(
         "Talismán", { priority: "0012", group: 'inventario', onDisplay: "&#10003;" }
@@ -897,7 +890,7 @@ undum.game.init = function (character, system) {
     system.setQuality("antorcha", false)
     system.setQuality("pala", false)
     system.setQuality("cubo", false)
-    system.setQuality("trajebuceo", false)
+    system.setQuality("traje", false)
     system.setQuality("libro", false)
     system.setQuality("barco", false)
     system.setQuality("talisman", false)
