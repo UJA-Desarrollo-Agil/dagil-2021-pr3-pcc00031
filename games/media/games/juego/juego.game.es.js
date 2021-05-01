@@ -101,7 +101,7 @@ undum.game.situations = {
         {
             enter: function (character, system, from) {
                 ini.play();
-                vid1.style.display = 'none'; // block
+                vid1.style.display = 'block';
                 vid2.style.display = 'none';
                 vid3.style.display = 'none';
                 vid4.style.display = 'none';
@@ -141,7 +141,7 @@ undum.game.situations = {
             enter: function (character, system, from) {
                 boss.pause();
                 ini.play();
-                vid3.style.display = 'none'; // block
+                vid3.style.display = 'block';
                 vid1.style.display = 'none';
                 vid2.style.display = 'none';
                 vid4.style.display = 'none';
@@ -260,7 +260,7 @@ undum.game.situations = {
             enter: function (character, system, from) {
                 ini.pause();
                 inter.play();
-                vid2.style.display = 'none'; // block
+                vid2.style.display = 'block';
                 vid1.style.display = 'none';
                 vid3.style.display = 'none';
                 vid4.style.display = 'none';
@@ -466,7 +466,7 @@ undum.game.situations = {
             enter: function (character, system, from) {
                 ini.pause();
                 inter.play();
-                vid4.style.display = 'none'; //block
+                vid4.style.display = 'block';
                 vid1.style.display = 'none';
                 vid2.style.display = 'none';
                 vid3.style.display = 'none';
@@ -558,7 +558,7 @@ undum.game.situations = {
             vid2.style.display = 'none';
             vid3.style.display = 'none';
             vid4.style.display = 'none';
-            vid5.style.display = 'none'; //block
+            vid5.style.display = 'block';
             vid6.style.display = 'none';
 
         }
@@ -665,8 +665,8 @@ undum.game.situations = {
                         system.doLink("contalisman");
                     }
                 }
-              }
             }
+        }
     ),
 
     historiagirl: new undum.SimpleSituation(
@@ -690,8 +690,8 @@ undum.game.situations = {
                         system.doLink("contalisman");
                     }
                 }
-              }
             }
+        }
     ),
 
     historiadengue: new undum.SimpleSituation(
@@ -729,6 +729,11 @@ undum.game.situations = {
 
         {
 
+            enter: function (character, system, from) {
+                ini.pause();
+                inter.play();
+            },
+
             actions: {
 
                 "tienetraje": function (character, system, action) {
@@ -738,8 +743,8 @@ undum.game.situations = {
                         system.doLink("buceo");
                     }
                 }
-              }
             }
+        }
 
     ),
 
@@ -773,94 +778,76 @@ undum.game.situations = {
            !Que casualidad!. Sin embargo, no todo iba a ser bueno, ya que debes de encontrar alguna manera de abrir esa gran puerta y acceder al escondite del mosquito.</p>\
            <p>Tras buscar por la zona y con el oxígeno al mínimo, encuentras una muesca en la pared que tiene una forma muy familiar. !Eso es!, tiene la misma forma que el talisman, por lo que <a href='elegirrepelente'> decides colocarlo</a>. </p>\
            ",
-         {
-               enter: function (character, system, from) {
-                   boss.play();
-                   inter.pause();
-                   vid1.style.display = 'none';
-                   vid2.style.display = 'none';
-                   vid3.style.display = 'none';
-                   vid4.style.display = 'none';
-                   vid5.style.display = 'none';
-                   vid6.style.display = 'none'; // block
-               },
-               
-           }
+        {
+            enter: function (character, system, from) {
+                boss.play();
+                inter.pause();
+                vid1.style.display = 'none';
+                vid2.style.display = 'none';
+                vid3.style.display = 'none';
+                vid4.style.display = 'none';
+                vid5.style.display = 'none';
+                vid6.style.display = 'block';
+            },
+
+        }
     ),
-    elegirrepelente: new undum.SimpleSituation( //PEDRO AÑADE ESTO --> <a href='https://www.youtube.com/watch?v=kiPqooccYmY&ab_channel=ElFuturoEsApasionantedeVodafone' class='raw' target='_new'> recordar el video </a>
+    elegirrepelente: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
             <p>La  puerta se abre y una gran fuerza te absorbe hacia el interior.</p>\
             <p>Cuando recobras la conciencia, ves que estas en una gran sala la cual está totalmente vacía y sin inundar. Justamente a tu derecha, encuentras lo que es un cadaver putrefacto con\
             una mochilla a su espalda. En ella te encuentras varios objetos, entre ellos un <a href='./repelente_sintetico'>repelente sintético</a>, <a href='./pulsera'>una pulsera de citronela</a>, <a href='./telefono'>un teléfono con la aplicacion antimosquitos</a>\
              y un <a href='./repelente_ultrasonidos'>repelente ultrasonidos</a>.Solo puedes seleccionar uno \
             de los objetos ya que no tienes mas espacio disponible asi que debes elegir con sabiduria.</p> \
-            <p>Casualmente te viene el recuerdo de un video chorra que viste en la madrugada sobre que es mejor para librarse de los mosquitos, por lo que decides hacer memoria y recordar el video</p>\
+            <p>Casualmente te viene el recuerdo de un <a href='https://www.youtube.com/watch?v=kiPqooccYmY&ab_channel=ElFuturoEsApasionantedeVodafone' class='raw' target='_new'> video chorra </a>\
+            que viste en la madrugada sobre que es mejor para librarse de los mosquitos, por lo que decides hacer memoria y recordar el video</p >\
             \
            ",
-         {
-               enter: function (character, system, from) {
-                   boss.pause();
-                   inter.pause();
-                   vid1.style.display = 'none';
-                   vid2.style.display = 'none';
-                   vid3.style.display = 'none';
-                   vid4.style.display = 'none';
-                   vid5.style.display = 'none';
-                   vid6.style.display = 'none'; // block
-               },
-               actions: {
-                    "repelente_sintetico": function (character, system, action) {
-                        system.setQuality("repelente_sintetico", true);
-                        system.setCharacterText("<p>Has obtenido el repelente</p>");
-                        system.doLink("bossmosquito");
-                        
-                    },
-                    "pulsera": function (character, system, action) {
-                        system.setQuality("pulsera", true);
-                        system.setCharacterText("<p>Has obtenido la pulsera de citronela</p>");
-                        system.doLink("bossmosquito");
-                        
-                    },
-                    "telefono": function (character, system, action) {
-                        system.setQuality("telefono", true);
-                        system.setCharacterText("<p>Has obtenido un telefono con una aplicación ultrasonidos</p>");
-                        system.doLink("bossmosquito");
-                        
-                    },
-                    "repelente_ultrasonidos": function (character, system, action) {
-                        system.setQuality("repultrasonido", true);
-                        system.setCharacterText("<p>Has obtenido un repelente ultrasonidos</p>");
-                        system.doLink("bossmosquito");
-                        
-                    },
-                }
-           }
-    ), 
-    bossmosquito: new undum.SimpleSituation( //PEDRO AÑADE ESTO --> <a href='https://www.youtube.com/watch?v=kiPqooccYmY&ab_channel=ElFuturoEsApasionantedeVodafone' class='raw' target='_new'> recordar el video </a>
+        {
+            actions: {
+                "repelente_sintetico": function (character, system, action) {
+                    system.setQuality("repelente_sintetico", true);
+                    system.setCharacterText("<p>Has obtenido el repelente</p>");
+                    system.doLink("bossmosquito");
+
+                },
+                "pulsera": function (character, system, action) {
+                    system.setQuality("pulsera", true);
+                    system.setCharacterText("<p>Has obtenido la pulsera de citronela</p>");
+                    system.doLink("bossmosquito");
+
+                },
+                "telefono": function (character, system, action) {
+                    system.setQuality("telefono", true);
+                    system.setCharacterText("<p>Has obtenido un telefono con una aplicación ultrasonidos</p>");
+                    system.doLink("bossmosquito");
+
+                },
+                "repelente_ultrasonidos": function (character, system, action) {
+                    system.setQuality("repultrasonido", true);
+                    system.setCharacterText("<p>Has obtenido un repelente ultrasonidos</p>");
+                    system.doLink("bossmosquito");
+
+                },
+            }
+        }
+    ),
+    bossmosquito: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
         <p>De pronto, un gran sonido hace retumbar la sala. De la nada, aparece el mosquito gigante dispuesto a clavar su prosbocide en tu pecho\
         y asi devorar toda tu sangre. Con gran habilidad consigues evadir el ataque y te diriges a <a href='atacamosquito'>atacarle</a>.</p>",
-         {
-               enter: function (character, system, from) {
-                   boss.pause();
-                   inter.pause();
-                   
-               },
-               
-                
-           }
-    ), 
+    ),
     atacamosquito: new undum.SimpleSituation(
         "",
         {
             enter: function (character, system, from) {
-                if(character.qualities.repelente_sintetico == true){
+                if (character.qualities.repelente_sintetico == true) {
                     system.write("<p>En ese mismo instante,ves como el mosquito se hecha hacia atrás con cierto temor. No sabes exactamente el porque, pero sin pensarlo sigues intentando\
                     acertar un golpe en él. Tras mucho rato atacando en vano, recuerdas que recogiste del cadaver un repelente y que posiblemente esa\
                     sea la causa por la que el mosquito tiene miedo a acercarse.</p> <p>Con tu gran ingenio, se te ocurren 2 planes para poder acercarte al mosquito y derrotarlo.</p>\
                     <p><ul><li><a href='rociarse'>Rociarte de repelente</a></li><li><a href='rociarmosquito'>Rociar al mosquito de repelente</a></li></ul></p>");
-                }else{
-                        system.write("<h1>HAS MUERTO</h1><p>  Tu ataque no surte efecto y el mosquito consigue atravesarte. Poco a poco ves como el mosquito va tragando tu sangre\
+                } else {
+                    system.write("<h1>HAS MUERTO</h1><p>  Tu ataque no surte efecto y el mosquito consigue atravesarte. Poco a poco ves como el mosquito va tragando tu sangre\
                         hasta que pierdes el conocimiento. Como era de esperar, has muerto y tu aventura a llegado a su fin :( </p>");
                 }
             }
@@ -873,7 +860,7 @@ undum.game.situations = {
         se lanza a por ti, atravesandote y absorbiendo toda tu sangre, muriendo en el acto. !Qué pena!, tu aventura ha llegado a su fin.\
         </p>",
         {
-            
+
         }
     ),
     rociarmosquito: new undum.SimpleSituation(
@@ -882,11 +869,11 @@ undum.game.situations = {
         no pueda soportar el olor y caiga desmayado al suelo. Te acercas despacio y <a href='./final'>arrancas su cabeza</a> con tus propias manos. Has conseguido\
         derrotar a este terrible enemigo de una manera muy ingeniosa y has conseguido salvar la isla y al mundo de este terrible enemigo.</p>",
         {
-            
+
             actions: {
                 "final": function (character, system, action) {
                     system.setQuality("mosquito", true);
-                    system.setQuality("porcentaje", character.qualities.porcentaje + 33);
+                    system.setQuality("porcentaje", character.qualities.porcentaje + 34);
                     system.doLink("fin");
                 }
             }
