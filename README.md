@@ -133,6 +133,34 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 
 No hemos añadido ninguna historia de usuario al Sprint Backlog. Se mantiene igual a como lo teníamos antes del PBR.
 
+## (Práctica 5) Consecuencias del Sprint Review
+
+Se ha hecho todo lo que estaba planeado una semana antes de la entrega.
+No han habido cambios en el product backlog desde que hicimos el PRB.
+
+ - **Cosas que han salido bien:**
+Todas las historias de usuario han sido implementadas.
+El reparto de tareas se ha realizado de manera efectiva tal y como estaba organizado.
+Hemos estado al tanto diariamente haciendo el Daily Scrum.
+
+ - **Problemas encontrados:**
+
+Dificultades en la puesta en común de un horario para hacer el Daily Scrum.
+Crear la idea para la nueva historia del juego.
+La HU correspondiente a preguntar al usuario por su nombre, aunque finalmente, con "un poco de ayuda" conseguimos implementarla. 
+
+ - **Soluciones aplicadas:**
+Reuniones de menor duración pero más frecuentes.
+
+ - **¿Qué es lo siguiente?:**
+Proyecto actualmente terminado.
+
+ - **Revisión de plazos:**
+Proyecto actualmente terminado.
+
+ - **Conclusión:**
+Finalmente hemos conseguido completar todas las HU's que nos propusimos desde un principio en unos plazos correctos.
+
 
 
 
