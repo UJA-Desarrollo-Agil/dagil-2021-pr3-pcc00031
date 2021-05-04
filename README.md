@@ -151,26 +151,30 @@ La HU correspondiente a preguntar al usuario por su nombre, aunque finalmente, c
 
  - **Soluciones aplicadas:**
 Reuniones de menor duración pero más frecuentes.
+Pregunta al profesor para las cuestiones, las cuales no teníamos respuesta.
 
  - **¿Qué es lo siguiente?:**
 Proyecto actualmente terminado.
 
  - **Revisión de plazos:**
-Proyecto actualmente terminado.
+Completado una semana antes de la finalización del sprint.
 
  - **Conclusión:**
-Finalmente hemos conseguido completar todas las HU's que nos propusimos desde un principio en unos plazos correctos.
+Finalmente hemos conseguido completar todas las HU's que nos propusimos desde un principio una semana antes de lo esperado.
 
-
-
-
-
-
-
-
-
-
-
-
-
+## (Práctica 5) Conclusiones obtenidas en la Sprint Retrospective
+ - **Inspección:**
+ En la realización de este Sprint, el grupo ha tenido una muy buena afinidad y hemos podido realizar mejor el trabajo debido al buen clima que había entre los compañeros.
+ Con respecto las herramientas utilizadas en la realización de la práctica:
+   - Telegram: Mantener comunicación entre compañeros del grupo y para ver la evolución del Sprint gracias a los bots implementados en el grupo.
+   - Visual Studio Code y Atom: Para la modificación de código.
+   - Tomato: Para cronometrar las Dailys.
+   - Google Meet: Para la reunión del grupo.
+   - Trello: Para la organización del trabajo y la realización correcta de una metodología agil en la evolución del proyecto.
+   - Github: Para compartir los avances entre los compañeros
+   - Itch.io: Para subir el juego a una página web.
+ - **Qué ha ido bien y qué mejorar:**
+Con respecto a las herramientas utilizadas, como dijimos anteriormente, no hemos tenido ningún problema en su uso, ya que estabamos familiarizados con todas ellas.
+ - **Adaptación:**
+Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nuestra opinión ha sido muy bueno por lo anteriormente comentado. Sin embargo, nos gustaría tener una asignación de tareas mas clara a la hora de comenzar el Sprint Planning.
 
