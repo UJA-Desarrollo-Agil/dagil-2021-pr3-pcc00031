@@ -495,16 +495,21 @@ undum.game.situations = {
     pangolin: new undum.SimpleSituation(
         "<h1>Matar pangolín</h1> \
 	<p>Te encuentras con los súbditos del Pangolín Gigante, decides:</p></br>\
-	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín </a></li> \
+	<p><ul><li><a href='./pangolin-muerto'> Matar pangolín</a><i>(Click para matar pangolín)</i></li> \
 	<li><a href='./ir-boss''>Enfrentar al Pangolín Gigante</a></li></ul></p>",
         {
             enter: function (character, system, from) {
                 boss.pause();
                 inter.play();
+                system.setCharacterText("<p>Quizá deberías de matar 60/5 pangolines para descubrir algo</p>");
+                
             },
             actions: {
                 "pangolin-muerto": function (character, system, action) {
                     system.setQuality("pangolines", character.qualities.pangolines + 1);
+                    if(character.qualities.pangolines > 11){
+                        system.setCharacterText("<p>Has descubierto el punto débil de los pangolines</p>")
+                    }
                 },
                 "ir-boss": function (character, system, action) {
                     system.doLink("segundoboss");
