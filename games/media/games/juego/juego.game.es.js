@@ -19,7 +19,16 @@ undum.game.version = "1.0";
 jQuery.fx.off = false
 
 //Nombre
-var nombre = "";//document.getElementById("nombrepj");
+var nombre = "";
+
+function preguntaNombre(){
+  nombre=prompt('¿Cómo te llamas?')
+  nombre=nombre || "Jambo"
+}
+
+function setNombre(){
+  $(".nombre").html(nombre)
+}
 
 // Audio
 var ini = document.getElementById("ini");
@@ -38,10 +47,12 @@ var vid6 = document.getElementById('vid6');
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Comienza tu aventura</h1>\
-		<img style = 'width:500px; height:320px; display: block; margin: 0 auto'  class= 'img-situation' src = './media/img/Bienvenido.png' > <br> \
-			<center><p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.<\p> </br>\
-			<p>Para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:<\p>\
-			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>",
+		  <img style = 'width:500px; height:320px; display: block; margin: 0 auto'  class= 'img-situation' src = './media/img/Bienvenido.png' > <br> \
+			<center><p>Bienvenido, estás a punto de comenzar tu aventura en este mundo.</p> </br>\
+      <script>preguntaNombre()</script>\
+			<p><span class='nombre'></span>, para llevar a cabo esta aventura, deberás indicarme qué tipo de rol quieres seguir en el juego:</p>\
+			<h1><a href='./baston' class='once'>Mago</a> - <a href='./espada' class='once'>Guerrero</a></h1>\
+      <script>setNombre()</script>",
         {
             enter: function (character, system, from) {
                 ini.play();
@@ -70,7 +81,7 @@ undum.game.situations = {
         }
     ),
 
-    selectorciudad: new undum.SimpleSituation( 
+    selectorciudad: new undum.SimpleSituation(
         "<h1>Tienes que tomar una decisión </h1>\
         <img class='img-situation' src='./media/img/mapamundi.jpeg'>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
@@ -95,10 +106,11 @@ undum.game.situations = {
 		aprender todas las lenguas existentes en el mundo.</p> </br>\
 		<p> Un lugareño con pintas extravagantes te saluda: </p></br> \
          <img class= 'img-situation' src = './media/img/jefetribu.jpg'> \
-		<p class='dialogo'><strong> Toro Sentado: </strong> Jambo,¿en qué puedo ayudarte?\
+		<p class='dialogo'><strong> Toro Sentado: </strong> <span class='nombre'></span>,¿en qué puedo ayudarte?\
 		<ul><li> <a href='./diag1' class='once'>¿Me podría decir donde habitan los murciélagos de la fruta? </a></li>\
 		<li> <a href='./diag2' class='once'>¿Qué prendas más bonitas,¿dónde las has comprado?</a> </li> \
-		<li> <a href='./diag3' class='once'>¿Qué opinas sobre las metodologías ágiles? </a></li></ul></p>",
+		<li> <a href='./diag3' class='once'>¿Qué opinas sobre las metodologías ágiles? </a></li></ul></p>\
+    <script>setNombre()</script>",
         {
             enter: function (character, system, from) {
                 ini.play();
@@ -204,8 +216,9 @@ undum.game.situations = {
     conversacionhuang: new undum.SimpleSituation(
         "\
 		<p class='dialogo'><strong>Huang: </strong>Nǐ hǎo, wǒ jiào Huang Vid, pareces nuevo en esta ciudad, en qué te puedo ayudar?\
-		<li> <a href='./diag1h' class='once'>¿Por qué todos tenéis los ojos así?</a> </li> \
-		<li> <a href='./diag2h' class='once'>¿Qué puedes contarme acerca de los Pangolines? </a></li></ul></p>",
+		<li> <a href='./diag1h' class='once'><strong><span class='nombre'></span></strong>: ¿Por qué todos tenéis los ojos así?</a> </li> \
+		<li> <a href='./diag2h' class='once'><strong><span class='nombre'></span></strong>: ¿Qué puedes contarme acerca de los Pangolines? </a></li></ul></p>\
+    <script>setNombre()</script>",
 
         {
             enter: function (character, system, from) {
