@@ -70,8 +70,9 @@ undum.game.situations = {
         }
     ),
 
-    selectorciudad: new undum.SimpleSituation(
+    selectorciudad: new undum.SimpleSituation( 
         "<h1>Tienes que tomar una decisión </h1>\
+        <img class='img-situation' src='./media/img/mapamundi.jpeg'>\
 		<p>¿A qué ciudad quieres ir e intentar salvar a su civilización de su oscuro futuro?:\
 		<h1><a href='africa'>Yambuku</a> o <a href='wuhan'>Wuhan</a> o <a href='islajava'>Isla de Java</a></h1></p>",
         {
@@ -93,7 +94,7 @@ undum.game.situations = {
 		<p>Como era de esperar, no habla el mismo idioma que tú, pero gracias a esos cursos que se anunciaban en youtube sobre aprender idiomas conseguiste \
 		aprender todas las lenguas existentes en el mundo.</p> </br>\
 		<p> Un lugareño con pintas extravagantes te saluda: </p></br> \
-        <!-- <img class= 'img-situation' src = './media/img/jefetribu.jpg'>--> \
+         <img class= 'img-situation' src = './media/img/jefetribu.jpg'> \
 		<p class='dialogo'><strong> Toro Sentado: </strong> Jambo,¿en qué puedo ayudarte?\
 		<ul><li> <a href='./diag1' class='once'>¿Me podría decir donde habitan los murciélagos de la fruta? </a></li>\
 		<li> <a href='./diag2' class='once'>¿Qué prendas más bonitas,¿dónde las has comprado?</a> </li> \
@@ -133,6 +134,7 @@ undum.game.situations = {
 
     wuhan: new undum.SimpleSituation(
         "<h1>Wuhan</h1>\
+        <img class='img-situation' src='./media/img/Wuhan.jpeg'>\
 		<p>Aparentemente te encuentras ante una ciudad avanzada y cuidada, pero no eres consciente de los peligros que la desolan…</p></br>\
 		<p>Vas con paso miedoso viendo a personas extrañas en tu trayecto. \
 		Te paras a leer unos carteles que parece que repiten por todas las calles y <a href='noticiapangolin' class='once'>descubres la causa de estos males…</a></p>",
@@ -152,7 +154,7 @@ undum.game.situations = {
     ),
 
     noticiapangolin: new undum.SimpleSituation(
-        "<h1>Wuhan</h1>\
+        "\
 		<p>La ciudad está siendo controlada por el poder de una entidad despiadada, el Pangolín gigante. (<a href='vermas' class='once'>Ver más</a>)</p></p></br>\
 		<p>Amenaza a la ciudad obligando a los ciudadanos a que sacrifiquen a sus hijos cada mes para contentar sus deseos.</p>\
 		<p>Hace unos años el Pangolín gigante era más compasivo, pero últimamente ha empezado a pedir cada vez más niños \
@@ -169,7 +171,7 @@ undum.game.situations = {
 
     vermas: new undum.SimpleSituation(
         "<h1>SOBRE EL PANGOLÍN GIGANTE</h1>\
-        <!--<img class='img-situation' src='./media/img/efrey.jpg'>-->\
+       <img class='img-situation' src='./media/img/efrey.jpg'>\
 		<p>Efrey, también conocido actualmente como el Pangolín gigante, solía ser un pangolín que disfrutaba todos los días la vida que tenía, jugaba con sus amigos y \
 		aspiraba a formar una gran familia junto a su mejor amiga.</p>\
 		<p>Pasó el tiempo y finalmente construyó una familia con su amor. Mientras caminaba un día con sus hijos, se encontró unos humanos (situación bastante normal que no generaría ningún problema) \
@@ -188,9 +190,9 @@ undum.game.situations = {
     ),
 
     huang: new undum.SimpleSituation(
-        "<h1>Wuhan</h1>\
+        "\
 		<p>Durante el trayecto te encuentras con un hombre que transmite la sensación de que tiene información interesante que puede contarte. </p></br>\
-        <!--<img class='img-situation' src='./media/img/huang.jpg'>--></br>\
+        <img class='img-situation' src='./media/img/huang.jpg'></br>\
 		<p>Por lo tanto <a href='conversacionhuang' class='once'>entablas una conversación con él</a>.</p>",
         {
             enter: function (character, system, from) {
@@ -200,7 +202,7 @@ undum.game.situations = {
     ),
 
     conversacionhuang: new undum.SimpleSituation(
-        "<h1>Wuhan</h1>\
+        "\
 		<p class='dialogo'><strong>Huang: </strong>Nǐ hǎo, wǒ jiào Huang Vid, pareces nuevo en esta ciudad, en qué te puedo ayudar?\
 		<li> <a href='./diag1h' class='once'>¿Por qué todos tenéis los ojos así?</a> </li> \
 		<li> <a href='./diag2h' class='once'>¿Qué puedes contarme acerca de los Pangolines? </a></li></ul></p>",
@@ -223,7 +225,7 @@ undum.game.situations = {
     ),
 
     conversacionhuang2: new undum.SimpleSituation(
-        "<h1>Wuhan</h1>\
+        "\
 		<p class='dialogo'><strong>Huang: </strong>Hoy es tu día de suerte, recientemente un estudio realizado por la Universidad de Wuhan, \
 		ha demostrado que una gran fuerza pangolinesca emana desde las ruinas de El Templo del Cielo.\
 		<p class='dialogo'>Desde hace 5 años, estas ruinas no han sido visitadas por nadie, de hecho, para acceder a ellas, \
@@ -249,6 +251,7 @@ undum.game.situations = {
 
     cuevabossuno: new undum.SimpleSituation(
         "<h1>Cueva Frutal</h1>\
+        <img class='img-situation' src='./media/img/cueva_frutal.jpg'>\
 	<p>Después de una larga caminata, consigues divisar el tan ansiado bosque, \
 	por lo que te diriges de inmediato allí. Entre tanto árbol, encuentras una \
 	cueva muy sospechosa, por lo que decides entrar.</p></br>\
@@ -453,7 +456,7 @@ undum.game.situations = {
 
     templocielo: new undum.SimpleSituation(
         "<h1>El templo del cielo</h1> \
-        <!--<img class='img-situation' src='./media/img/templo.jpg'>-->\
+        <img class='img-situation' src='./media/img/templo.jpg'>\
 	<p>Te adentras en las profundidades de este templo destruido, \
 	no sin antes usar un traje protector creado con la piel de aquel murciélago de Yambuku.</p></br> \
 	<p>Desde la entrada notas la presencia de decenas de pangolines, </br>\
@@ -547,7 +550,7 @@ undum.game.situations = {
 
     islajava: new undum.SimpleSituation(
         "<h1> Isla de Java </h1>\
-        <!--<img class='img-situation' src='./media/img/isla.jpg'>-->\
+       <img class='img-situation' src='./media/img/isla.jpg'>\
         <p>Depués de haber nadado durante un rato, llegas a una isla tropical y paradisiaca, estás en la Isla de Java. Es una isla sumamente \
     tranquila ya que no hay personas ni siquiera animales, sin embargo te encuentras con bastantes objetos en la playa.</br></br>\
         <a href='playa'>Continuar a la playa</a></p> ", {
@@ -567,7 +570,7 @@ undum.game.situations = {
 
     playa: new undum.SimpleSituation(
         "<h1> Playa de la Isla de Java </h1>\
-        <!--<img class='img-situation' src='./media/img/arena.jpg'>-->\
+        <img class='img-situation' src='./media/img/arena.jpg'>\
         <p>Entre los objetos que hay en la playa, localizas: una <a class='once' href='./pala'>pala</a> y <a class='once' href='./cubo'>cubo</a> de juguete, \
         lo cual es curioso porque no hay nadie cerca, te percatas de que tienen resto de sangre;\
     un <a class='once' href='./barco'>barco de madera</a>, puede que te sea útil en un futuro para navegar de forma más rápida, \
@@ -592,7 +595,7 @@ undum.game.situations = {
                 "agujero": function (character, system, action) {
                     system.write("</br><p>Al cavar un agujero te percatas de que hay enterrado un <a href='./talisman' class='once'>talisman</a>,\
                                 puede que te sea útil en un futuro.</br></br>\
-                       <!--<img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'>--></br>\
+                       <img style='width:300px; height:220px;display:block; margin: 0 auto' class='img-situation' src='./media/img/talisman.png'></br>\
                                 <h1><a href='islajavaprof'>Continuar</a> o <a href='play'>volver a la playa</a></p>");
                 },
                 "talisman": function (character, system, action) {
@@ -637,11 +640,11 @@ undum.game.situations = {
         "<h1>Profundidades de la Isla de Java</h1>\
         <p>Después de haber caminado por la playa un rato te adentras más profundo en la isla \
         y descubres una pequeña cabaña. </p></br>\
-        <!--<img class='img-situation' src='./media/img/casa.jpg'>-->\
+        <img class='img-situation' src='./media/img/casa.jpg'>\
         <p>Antes de entrar en ella te encuentras a una joven la cual \
         te observa desde la rama de un árbol, sin que te des cuenta, tras un portentoso salto, se \
         para frente a ti y de manera muy efusiva te dice:</p></br>\
-        <!--<img class='img-situation' src='./media/img/girl.jpg'>-->\
+        <img class='img-situation' src='./media/img/girl.jpg'>\
         <p class='dialogo'>¿Qué haces aquí? No es posible que hayas podido llegar hasta aquí sin morir…</p> \
         <p> Le cuentas que tu travesía por la isla ha sido de lo más agradable y le preguntas: </br></br>\
         <ul><li> <a href='soledad' class='once'>¿No hay nadie más en esta isla?</a></li>\
@@ -670,7 +673,7 @@ undum.game.situations = {
     ),
 
     historiagirl: new undum.SimpleSituation(
-        "<h1>Historia de la chica</h1>\
+        "\
         <p class='dialogo'>Desde hace años, la plaga de mosquitos acuáticos que habitan esta isla \
         eliminaron a toda la población que vivía pacíficamente en este paraíso.</br></br>Hasta hace unos meses \
         sólo quedaba mi familia: mi prometido (Boy) y nuestros dos hijos. Un día decidimos salir para que \
@@ -707,13 +710,13 @@ undum.game.situations = {
         consiguió la capacidad para transmitir estas cualidades a los demás mosquitos de la isla.</p></br>\
         <p>Todos ellos se conocen como: 'Los mosquitos del Dengue'</p></br></br>\
         <p><i>Escrito por: Boy (Esposo de Girl)</i></p></br></br>\
-        <p>PD: No sé cuanto tiempo aguantaré en esta isla...</p></br>\
+        <p>PD: Con mis últimos esfuerzos voy a enfrentarme al maldito mosquito del dengue. Ya mismo me reuniré con vosotros..</p></br>\
         <p><a href='playa'>Continuar</a></p>"
     ),
 
     sintalisman: new undum.SimpleSituation(
         "<h1> HAS MUERTO </h1>\
-        <p>Mientras caminas por la playa, observas a lo lejos una gran nube negra que parece ser la plaga. \
+        <p><img class='img-situation' src='./media/img/muerte.jpeg'>Mientras caminas por la playa, observas a lo lejos una gran nube negra que parece ser la plaga. \
         Te gusta ser el héroe siempre y decides lanzarte a derrotarla. </p>\
         <p>Por desgracia, la gran cantidad de mosquitos finalmente acaba contigo y no has sido capaz de terminar tu aventura. </p>." // Añadir foto de Kiko Rivera
 
@@ -721,6 +724,7 @@ undum.game.situations = {
 
     contalisman: new undum.SimpleSituation(
         "<h1>lucha contra la plaga</h1>\
+        <img class='img-situation' src='./media/img/plaga.jpg'>\
         <p>Mientras caminas por la playa, observas a lo lejos una gran nube negra que parece ser la plaga. \
         Te gusta ser el héroe siempre y decides lanzarte a derrotarla. </p>\
         <p>Cuando te acercas a ella, los mosquitos se abren paso y no te atacan. Parece que el efecto del talismán que llevas encima\
@@ -737,11 +741,7 @@ undum.game.situations = {
             actions: {
 
                 "tienetraje": function (character, system, action) {
-                    if (character.qualities.traje == false) {
-                        system.doLink("previoboss3");
-                    } else {
-                        system.doLink("buceo");
-                    }
+                   system.doLink("previoboss3")
                 }
             }
         }
@@ -749,14 +749,26 @@ undum.game.situations = {
     ),
 
     previoboss3: new undum.SimpleSituation(
-        "<h1>buscar traje</h1>\
-        <p>Encuentras unas ruinas inundadas, lo que indica que tu aventura continuará en las profundidades del mar. Es por ello que necesitas un traje de buceo.</p>\
-        <p>Debes <a class='once' href='buscatraje'>buscar uno en la playa</a></p>"
+        "<p></p>",{
+            enter: function (character, system, from) {
+                system.write("<h1>Búsqueda </h1><p><img class='img-situation' src='./media/img/playa2.jpg'> Has llegado a la otra parte de la Isla y no has encontrado nada. Por ello llegas a la conclusión que la plaga ha salido del fondo del océano por lo que \
+                decides explorar en el fondo del mar.</p>")
+                if(character.qualities.traje == true){
+                    system.write("<p><img class='img-situation' src='./media/img/ruinas.jpeg'>Tras mucho explorar consigues llegar a la entrada del templo. El templo estaba situado justamente a 65 metros de profundidad, que casualmente es la profundidad máxima del traje.\
+                    Sin embargo, no todo iba a ser bueno, ya que debes de encontrar alguna manera de abrir esa gran puerta y acceder al escondite del mosquito.</p>\
+                   <p>Tras buscar por la zona y con el oxígeno al mínimo, encuentras una muesca en la pared que tiene una forma muy familiar. !Eso es!, tiene la misma forma que el talisman, por lo que <a href='elegirrepelente'> decides colocarlo</a>. </p>")
+                }else{
+                    system.write("<p> Para poder realizar la búsqueda necesitas un traje de buceo. Recuerdas que viste uno en la playa por lo que decides \
+                    <a class='once' href='buscatraje'>volver</a>.</p>")
+                }
+            },
+         }
 
     ),
 
     buscatraje: new undum.SimpleSituation(
         "<h1> Playa de la Isla de Java </h1>\
+        <img class='img-situation' src='./media/img/arena.jpg'>\
         <p>No recuerdas exactamente donde fue, así que haces una búsqueda que dura horas y parece interminable... \
         ¡Ahí está! Has encontrado el <a class='once' href='./encuentratraje'>traje de buceo</a></p>",
         {
@@ -773,9 +785,9 @@ undum.game.situations = {
 
     buceo: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
-        <img class='img-situation' src='./media/img/mosquito.jpg'>\
-	       <p>Con mucha suerte, consigues llegar a la entrada del templo. El templo estaba situado justamente a 65 metros de profundidad, que casualmente es la profundidad máxima del traje.\
-           !Que casualidad!. Sin embargo, no todo iba a ser bueno, ya que debes de encontrar alguna manera de abrir esa gran puerta y acceder al escondite del mosquito.</p>\
+        <img class='img-situation' src='./media/img/ruinas.jpeg'>\
+	       <p>Tras mucho explorar consigues llegar a la entrada del templo. El templo estaba situado justamente a 65 metros de profundidad, que casualmente es la profundidad máxima del traje.\
+            Sin embargo, no todo iba a ser bueno, ya que debes de encontrar alguna manera de abrir esa gran puerta y acceder al escondite del mosquito.</p>\
            <p>Tras buscar por la zona y con el oxígeno al mínimo, encuentras una muesca en la pared que tiene una forma muy familiar. !Eso es!, tiene la misma forma que el talisman, por lo que <a href='elegirrepelente'> decides colocarlo</a>. </p>\
            ",
         {
@@ -794,9 +806,10 @@ undum.game.situations = {
     ),
     elegirrepelente: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
+        <img class='img-situation' src='./media/img/mzulft.jpg'>\
             <p>La  puerta se abre y una gran fuerza te absorbe hacia el interior.</p>\
-            <p>Cuando recobras la conciencia, ves que estas en una gran sala la cual está totalmente vacía y sin inundar. Justamente a tu derecha, encuentras lo que es un cadaver putrefacto con\
-            una mochilla a su espalda. En ella te encuentras varios objetos, entre ellos un <a href='./repelente_sintetico'>repelente sintético</a>, <a href='./pulsera'>una pulsera de citronela</a>, <a href='./telefono'>un teléfono con la aplicacion antimosquitos</a>\
+            <p>Cuando recobras la conciencia, ves que estas en una gran sala la cual está totalmente vacía y sin inundar. Justamente a tu derecha, encuentras un cadáver con una túnica\
+            Al abrir la túnica encuentras varios objetos, entre ellos un <a href='./repelente_sintetico'>repelente sintético</a>, <a href='./pulsera'>una pulsera de citronela</a>, <a href='./telefono'>un teléfono con la aplicacion antimosquitos</a>\
              y un <a href='./repelente_ultrasonidos'>repelente ultrasonidos</a>.Solo puedes seleccionar uno \
             de los objetos ya que no tienes mas espacio disponible asi que debes elegir con sabiduria.</p> \
             <p>Casualmente te viene el recuerdo de un <a href='https://www.youtube.com/watch?v=kiPqooccYmY&ab_channel=ElFuturoEsApasionantedeVodafone' class='raw' target='_new'> video chorra </a>\
@@ -834,6 +847,7 @@ undum.game.situations = {
     ),
     bossmosquito: new undum.SimpleSituation(
         "<h1> Mosquito del Dengue </h1>\
+        <img class='img-situation' src='./media/img/mosquito.jpg'>\
         <p>De pronto, un gran sonido hace retumbar la sala. De la nada, aparece el mosquito gigante dispuesto a clavar su prosbocide en tu pecho\
         y asi devorar toda tu sangre. Con gran habilidad consigues evadir el ataque y te diriges a <a href='atacamosquito'>atacarle</a>.</p>",
     ),
@@ -847,15 +861,14 @@ undum.game.situations = {
                     sea la causa por la que el mosquito tiene miedo a acercarse.</p> <p>Con tu gran ingenio, se te ocurren 2 planes para poder acercarte al mosquito y derrotarlo.</p>\
                     <p><ul><li><a href='rociarse'>Rociarte de repelente</a></li><li><a href='rociarmosquito'>Rociar al mosquito de repelente</a></li></ul></p>");
                 } else {
-                    system.write("<h1>HAS MUERTO</h1><p>  Tu ataque no surte efecto y el mosquito consigue atravesarte. Poco a poco ves como el mosquito va tragando tu sangre\
+                    system.write("<h1>HAS MUERTO</h1><p><img class='img-situation' src='./media/img/muerte.jpeg'>  Tu ataque no surte efecto y el mosquito consigue atravesarte. Poco a poco ves como el mosquito va tragando tu sangre\
                         hasta que pierdes el conocimiento. Como era de esperar, has muerto y tu aventura a llegado a su fin :( </p>");
                 }
             }
         }
     ),
     rociarse: new undum.SimpleSituation(
-        "<h1> HAS MUERTO</h1>\
-        <p>Abres el bote y te rocias totalmente con el repelente. Como era de esperar el mosquito no se quiere acercar, por lo que intentas\
+        "<p>Abres el bote y te rocias totalmente con el repelente. Como era de esperar el mosquito no se quiere acercar, por lo que intentas\
         durante varias horas darle un golpe pero te lo esquiva todo. Finalmente, el efecto de spray desaparece y el mosquito \
         se lanza a por ti, atravesandote y absorbiendo toda tu sangre, muriendo en el acto. !Qué pena!, tu aventura ha llegado a su fin.\
         </p>",
@@ -864,8 +877,7 @@ undum.game.situations = {
         }
     ),
     rociarmosquito: new undum.SimpleSituation(
-        "<h1> MOSQUITO DERROTADO </h1>\
-        <p>Te acercas lo suficiente como para poder rociar al mosquito con el repelente provocando que el mosquito \
+        "<p>Te acercas lo suficiente como para poder rociar al mosquito con el repelente provocando que el mosquito \
         no pueda soportar el olor y caiga desmayado al suelo. Te acercas despacio y <a href='./final'>arrancas su cabeza</a> con tus propias manos. Has conseguido\
         derrotar a este terrible enemigo de una manera muy ingeniosa y has conseguido salvar la isla y al mundo de este terrible enemigo.</p>",
         {
@@ -874,7 +886,12 @@ undum.game.situations = {
                 "final": function (character, system, action) {
                     system.setQuality("mosquito", true);
                     system.setQuality("porcentaje", character.qualities.porcentaje + 34);
+                    if(character.qualities.porcentaje < 100){
+                        system.write("<h1>Aún queda trabajo por hacer. Asi que te diriges a Yambuku</h1>");
+                        system.doLink("africa");
+                    }else{
                     system.doLink("fin");
+                    }
                 }
             }
         }
@@ -884,7 +901,7 @@ undum.game.situations = {
         "<h1> FIN </h1>\
 	       <p>¡Enhorabuena! Has conseguido salvar a la humanidad de los distintos peligros que la acechaban.\
 	        Serás reconocido como el héroe de la Tierra, todos te recordarán.</p>\
-        <!--<img class= 'img-situation' src = './media/img/heroe.jpg'>-->",
+        <img class= 'img-situation' src = './media/img/heroe.jpg'>",
         {
             enter: function (character, system, from) {
                 boss.pause();
