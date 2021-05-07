@@ -46,6 +46,8 @@ https://trello.com/b/TdDKv1oc/pr%C3%A1ctica-3
 
 ###  Consecuencia del Product Backlog Refinement(PBR)
 
+Tras una semana del comienzo del primer Sprint, el cliente agregó nuevas HU's por lo tanto nos reunimos para asignar valor y esfuerzo a las nuevas historias usando la técnica de Planning Poker. Además decidimos agregar algunas de ellas al Sprint Backlog.
+
 ![1](https://user-images.githubusercontent.com/66868520/113691400-a921ee00-96cc-11eb-880e-cc782755301c.jpeg)
 ![2](https://user-images.githubusercontent.com/78795146/113691781-1b92ce00-96cd-11eb-924a-d743dc3a0284.jpeg)
 ![3](https://user-images.githubusercontent.com/49394226/113692127-80e6bf00-96cd-11eb-89d8-95bc104b825c.jpeg)
@@ -149,6 +151,8 @@ Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nue
 ![1](https://user-images.githubusercontent.com/66868520/116217600-182db800-a74a-11eb-8b6a-608c9a4efe54.jpeg)
 ![2](https://user-images.githubusercontent.com/66868520/116217686-28de2e00-a74a-11eb-8321-765e6a7c8e39.jpeg)
 ![3](https://user-images.githubusercontent.com/78795146/116218251-a2761c00-a74a-11eb-825e-35acc707ba5e.jpeg)
+
+Tras una semana del comienzo del segundo Sprint, el cliente agregó nuevas HU's por lo tanto nos reunimos para asignar valor y esfuerzo a las nuevas historias usando la técnica de Planning Poker.
 
 No hemos añadido ninguna historia de usuario al Sprint Backlog. Se mantiene igual a como lo teníamos antes del PBR.
 Hemos pensado que las historias de usuario introducidas en el PBR no eran necesarias para nuestro juego y no aportaban un valor muy alto. Por ello decidimos dedicarle más tiempo a las historias de usuario ya seleccionadas y poder cumplir con los plazos.
