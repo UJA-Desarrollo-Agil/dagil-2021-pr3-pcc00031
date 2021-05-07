@@ -108,7 +108,8 @@ A pesar de que fuimos bastante optimistas a la hora de elegir historias de usuar
    - Itch.io: Para subir el juego a una página web.
  - ##### Qué ha ido bien y qué mejorar:
 Con respecto a las herramientas utilizadas, no hemos tenido nimgún problema en su uso, ya que estabamos familiarizados con todas ellas.
- - ##### Adaptación:
+Debemos de mejorar a la hora de ponernos de acuerdo en un horario para realizar las Daily Scrum.
+- ##### Adaptación:
 Para el futuro, nos gustaría mantener el ritmo que hemos llevado, ya que en nuestra opinión ha sido muy bueno por lo anteriormente comentado. Sin embargo, nos gustaría tener una asignación de tareas mas clara a la hora de comenzar el Sprint Planning.
 
 ### Capturas de pantalla del Product Backlog.
@@ -195,6 +196,7 @@ Finalmente hemos conseguido completar todas las HU's que nos propusimos desde un
 Es decir, hemos mantenido las mismas herramientas.
  - ##### Qué ha ido bien y qué mejorar:
 Con respecto a las herramientas utilizadas, no hemos tenido nimgún problema en su uso, ya que estabamos familiarizados con todas ellas.
+Conseguimos un horario común para poder realizar la Daily Scrum.
  - ##### Adaptación:
 Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos planificado de mejor manera las tareas y esto nos ha llevado a que el proyecto haya sido completado antes de lo previsto.
 
