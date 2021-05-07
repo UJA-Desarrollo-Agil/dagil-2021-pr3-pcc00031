@@ -76,15 +76,13 @@ No han habido cambios en el product backlog desde que hicimos el PRB.
  - #### Cosas que han salido bien:
 Todas las historias de usuario han sido implementadas.
 El reparto de tareas se ha realizado de manera efectiva tal y como estaba organizado.
-Hemos estado al tanto diariamente haciendo el Daily Scrum.
 
  - #### Problemas encontrados:
 
-Dificultades en la puesta en común de un horario para hacer el Daily Scrum.
 Crear la idea principal del juego, ya que fue lo que más tardamos en decidir entre todos.
 
  - #### Soluciones aplicadas:
-Reuniones de menor duración pero más frecuentes.
+Para desarrollar mejor el juego le pedimos opinión a terceros.
 
  - ##### ¿Qué es lo siguiente?:
 Para el siguiente Sprint, tenemos aún una historia de usuario de valor innegociable, por lo tanto deberá de ser implementada. 
@@ -165,22 +163,20 @@ No han habido cambios en el product backlog desde que hicimos el PRB.
  - #### Cosas que han salido bien:
 Todas las historias de usuario han sido implementadas.
 El reparto de tareas se ha realizado de manera efectiva tal y como estaba organizado.
-Hemos estado al tanto diariamente haciendo el Daily Scrum.
 
  - #### Problemas encontrados:
 
-Dificultades en la puesta en común de un horario para hacer el Daily Scrum.
 Crear la idea para la nueva historia del juego.
-La HU correspondiente a preguntar al usuario por su nombre, aunque finalmente, con "un poco de ayuda" conseguimos implementarla. 
+La HU correspondiente a preguntar al usuario por su nombre nos dio problemas. 
 
  - #### Soluciones aplicadas:
-Reuniones de menor duración pero más frecuentes.
+Decidimos obtener ayuda del profesor para solucionar nuestros problemas.
 
  - #### ¿Qué es lo siguiente?:
 Proyecto actualmente terminado.
 
  - #### Revisión de plazos:
-Proyecto actualmente terminado.
+Hemos conseguido terminar el proyecto tres días antes de la entrega.
 
  - #### Conclusión:
 Finalmente hemos conseguido completar todas las HU's que nos propusimos desde un principio en unos plazos correctos.
@@ -208,16 +204,3 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ### Captura de pantalla global
 ![3](https://user-images.githubusercontent.com/78795146/117039995-ae914900-ad09-11eb-9c53-90e7c5fc9ee3.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
