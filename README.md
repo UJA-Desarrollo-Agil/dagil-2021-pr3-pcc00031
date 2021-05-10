@@ -1,5 +1,5 @@
 
-# ROL ADVENTURE (provisional)
+# ROL ADVENTURE
   **Enlace al juego:** [Rol Adventure](https://amvc0011.itch.io/roladventure)
 
 # ÍNDICE
