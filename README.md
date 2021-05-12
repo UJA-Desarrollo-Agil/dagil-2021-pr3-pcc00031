@@ -222,9 +222,13 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ![graficaburndown](https://user-images.githubusercontent.com/78792818/117963914-45b95a80-b321-11eb-8a5c-3dc389248afa.png)
 
+ [*Gráfica*](https://docs.google.com/spreadsheets/d/11TlHCRtsCPrQWDfci00f2uq20g1LbkCVtfcaBAC76LI/edit?usp=sharing)
+
 #### Gráfica burn-up
 
 ![graficaburnup](https://user-images.githubusercontent.com/78792818/117963976-55d13a00-b321-11eb-9249-8c275343d976.png)
+
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1zFEtcwznymuej0PmNRwVemSwB0VIWm06gRj97QZtOOA/edit?usp=sharing)
 
 ### Gráficas del valor asociado a las HU's.
 
@@ -232,10 +236,12 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ![1burndown](https://user-images.githubusercontent.com/49394226/117964359-cc6e3780-b321-11eb-8ae4-b5f719eef977.PNG)
 
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1EdGxDnrYjQAuJKcRG7FjznDcEtH_ALtgKUTXmbhDNVk/edit?usp=sharing)
 #### Gráfica burn-up
 
 ![2burn-up](https://user-images.githubusercontent.com/49394226/117964386-d2641880-b321-11eb-8689-8a22d79c71f5.PNG)
 
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1p4hncT76R4DGMsUYE6YPH_UNEp6eRFPH_S4ijhkBgFg/edit?usp=sharing)
 ### Tabla de velocidades
 
 ![tablavelo](https://user-images.githubusercontent.com/49394226/117964548-07706b00-b322-11eb-873d-01b82f319b26.PNG)
@@ -250,12 +256,45 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ![Sprint2](https://user-images.githubusercontent.com/66868520/117965268-d7759780-b322-11eb-9a37-933a082daaf4.JPG)
 
+
 ### Gráficas de los PH del Sprint 1
 
 #### Gráfica Burndown
+![image](https://user-images.githubusercontent.com/78795146/117970661-32aa8880-b329-11eb-867b-cb19a84d1916.png)
 
-![Burndown](https://user-images.githubusercontent.com/66868520/117965663-510d8580-b323-11eb-819a-1a31306e1bfc.JPG)
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1ZCNKGvtv4vrGGXHOs3ObjzEayTc9nBoLVYFtdGQVoD4/edit?usp=sharing)
 
 #### Gráfica Burn-Up
-![BurnUp](https://user-images.githubusercontent.com/66868520/117965819-7bf7d980-b323-11eb-9d75-541ce515c638.JPG)
+![burnup1](https://user-images.githubusercontent.com/78795146/117966865-b2822400-b324-11eb-8285-dbb7754a759f.png)
 
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1xBn_N0ZeH6vXrijLJG5CUvHurSeKlXLbj118oTw9zO0/edit?usp=sharing)
+
+
+### Gráficas de los PH del Sprint 2
+
+#### Gráfica Burndown
+
+![burndown](https://user-images.githubusercontent.com/78795146/117966562-55866e00-b324-11eb-8832-abe4dc6ca0b3.png)
+
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1ozeAAi5vUMG6BN__75xGwd02Nl55AOhgWlNEa3iAp7A/edit?usp=sharing)
+
+
+#### Gráfica Burn-Up
+![burnup](https://user-images.githubusercontent.com/78795146/117966580-5a4b2200-b324-11eb-960d-cc7247a37904.png)
+
+[*Gráfica*](https://docs.google.com/spreadsheets/d/1GAoiUQ6QxgAFRCQj4WdNf-166NNIfDOXqm-fmmKARVk/edit?usp=sharing)
+
+
+### Conclusiones
+#### Conclusión global
+
+Como se puede observar tanto en las tablas como en las gráficas, nos hemos dejado atrás muchos historias de usuario que tenían poco valor y PH muy alto. Esto se debe a que hemos priorizado la realización de aquellas historias de usuario que tuviesen mayor valor para el proyecto. Por ende, creemos que el desarrollo global del proyecto ha sido satisfactorio y tenemos un juego con un valor muy alto.
+Si el proyecto hubiese tenido una duración mayor, el siguiente paso hubiese sido implementar aquellas historias de usuario con PH alto.
+
+#### Conclusión Sprint 1
+En la realización del Sprint 1 tuvimos un inicio muy lento a la hora de terminar historias de usuario, por ello en la primera semana no hay ninguna variación en las gráficas.
+Esto se debe a que dividimos en muchas tareas cada historia de usuario por lo que realizamos muchas entregas de tareas pero no concluimos ninguna historia de usuario.
+Pese al inicio lento que tuvimos, finalmente conseguimos entregar todas las historias de usuario que propusimos para este Sprint.
+
+#### Conclusión Sprint 2
+Para este sprint, nos quedaron aquellas historias de usuario que contenian mucho valor y que se implementaban muy facilmente. Por ello, a lo largo de la semana se fueron realizando las tareas que componian esa historia de usuario y justo se acaban a final de semana. Esto explica los picos que existen los ultimos dias de cada semana de desarrollo del proyecto.
