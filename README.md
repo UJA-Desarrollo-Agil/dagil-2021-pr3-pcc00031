@@ -5,10 +5,10 @@
 # ÍNDICE
 1. [Descripción](#descripción)
 2. [URL del tablero Trello](#trello)
-3. [PRÁCTICA 3](#prac3)
-4. [PRÁCTICA 4](#prac4)
-5. [PRÁCTICA 5](#prac5)
-6. [PRÁCTICA 6](#prac6)
+3. [PRÁCTICA 3 - Sprint 0](#prac3)
+4. [PRÁCTICA 4 - Sprint 1](#prac4)
+5. [PRÁCTICA 5 - Sprint 2](#prac5)
+6. [PRÁCTICA 6 - Métricas](#prac6)
 
 <a name="descripcion"></a>
 ## Descripción
@@ -222,7 +222,24 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ![graficaburndown](https://user-images.githubusercontent.com/78792818/117963914-45b95a80-b321-11eb-8a5c-3dc389248afa.png)
 
-#### Gráfica burnup
+#### Gráfica burn-up
 
 ![graficaburnup](https://user-images.githubusercontent.com/78792818/117963976-55d13a00-b321-11eb-9249-8c275343d976.png)
+
+### Gráficas del valor asociado a las HU's.
+
+#### Gráfica burndown
+
+![1burndown](https://user-images.githubusercontent.com/49394226/117964359-cc6e3780-b321-11eb-8ae4-b5f719eef977.PNG)
+
+#### Gráfica burn-up
+
+![2burn-up](https://user-images.githubusercontent.com/49394226/117964386-d2641880-b321-11eb-8689-8a22d79c71f5.PNG)
+
+### Tabla de velocidades
+
+![tablavelo](https://user-images.githubusercontent.com/49394226/117964548-07706b00-b322-11eb-873d-01b82f319b26.PNG)
+
+
+
 
