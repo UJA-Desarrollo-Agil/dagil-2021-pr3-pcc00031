@@ -8,6 +8,7 @@
 3. [PRÁCTICA 3](#prac3)
 4. [PRÁCTICA 4](#prac4)
 5. [PRÁCTICA 5](#prac5)
+6. [PRÁCTICA 6](#prac6)
 
 <a name="descripcion"></a>
 ## Descripción
@@ -206,3 +207,22 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ### Captura de pantalla global
 ![3](https://user-images.githubusercontent.com/78795146/117039995-ae914900-ad09-11eb-9c53-90e7c5fc9ee3.png)
+
+<a name="prac6"></a>
+
+## PRÁCTICA 6 (Métricas)
+
+### Tabla para los datos de las gráficas del proyecto en su totalidad.
+
+![tabla1](https://user-images.githubusercontent.com/78792818/117963709-fffc9200-b320-11eb-8fa5-ac92ca721df3.png)
+
+### Gráficas de los puntos de historia.
+
+#### Gráfica burndown
+
+![graficaburndown](https://user-images.githubusercontent.com/78792818/117963914-45b95a80-b321-11eb-8a5c-3dc389248afa.png)
+
+#### Gráfica burnup
+
+![graficaburnup](https://user-images.githubusercontent.com/78792818/117963976-55d13a00-b321-11eb-9249-8c275343d976.png)
+
