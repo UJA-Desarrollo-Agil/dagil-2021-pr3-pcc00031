@@ -240,6 +240,22 @@ Creemos que hemos mejorado mucho con respecto al Sprint anterior ya que hemos pl
 
 ![tablavelo](https://user-images.githubusercontent.com/49394226/117964548-07706b00-b322-11eb-873d-01b82f319b26.PNG)
 
+### Tabla con los datos para la gráfica de los sprints
 
+#### Sprint 1
 
+![Sprint1](https://user-images.githubusercontent.com/66868520/117965078-a72df900-b322-11eb-9bf2-2d82c3535427.JPG)
+
+#### Sprint 2
+
+![Sprint2](https://user-images.githubusercontent.com/66868520/117965268-d7759780-b322-11eb-9a37-933a082daaf4.JPG)
+
+### Gráficas de los PH del Sprint 1
+
+#### Gráfica Burndown
+
+![Burndown](https://user-images.githubusercontent.com/66868520/117965663-510d8580-b323-11eb-819a-1a31306e1bfc.JPG)
+
+#### Gráfica Burn-Up
+![BurnUp](https://user-images.githubusercontent.com/66868520/117965819-7bf7d980-b323-11eb-9d75-541ce515c638.JPG)
 
